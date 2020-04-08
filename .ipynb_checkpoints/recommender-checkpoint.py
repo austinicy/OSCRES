@@ -10,7 +10,7 @@ class University_Course_F(Fact):
     overall_score = Field(float)
     field_of_study = Field(str)
     subject = Field(str)
-    min_IELTS = Field(float)
+    min_IETLTS = Field(float)
     accomodation = Field(bool)
 
 class Student_F(Fact):
@@ -25,25 +25,31 @@ class Recommendation(KnowledgeEngine):
         super().__init__(*args, **kwargs)
         self.recommended = False
 
-    @Rule(AS.s << Student_F(IELTS_score = MATCH.IELTS_score), 
-        AS.u << University_Course_F(min_IELTS = MATCH.min_IELTS), 
-        TEST(lambda IELTS_score, min_IELTS: IELTS_score >= min_IELTS), salience =1)
+    @Rule(AS.s << Student_F(IELTS_score = MATCH.IELTS_score), TEST(lambda IELTS_score: IELTS_score >= min_IELTS), salience =1)
     def testRule1(self):
         print("you rock")
         self.recommended = True
 
-
 def do_recommendation(uni_list, student):
     recommendation_list = []
-    for uni in uni_list:
-        recommender_engine = Recommendation()
-        recommender_engine.reset()
-        recommender_engine.declare(Student_F(IELTS_score=student.ielts_score))
-        recommender_engine.declare(University_Course_F(min_IELTS=uni["min_ielts"]))
-        recommender_engine.run()
-        recommender_engine.facts
-        if (recommender_engine.recommended):
-            recommendation_list.append(uni["name"])
-    return recommendation_list
+    for record in uni_list:
+        uni_name = record["name"][0]
+        min_IELTS = record["min_ielts"][0]
+        recommender = Recommendation()
+        recommender.reset()
+        recommender.run()
+        recommender.facts
+        if (recommender.recommended):
+            recommendation_list.append(uni_name)
 
 
+# driver program
+from University_Course.models import University_Course
+from Student/models import Student
+uni_course_list = University_Course.objects.values()
+print(uni_course_list)
+
+student = Student("Norman", "UK", 5.0)
+
+recommended_list = do_recommendation(uni_course_list, student)
+print(recommended_list)

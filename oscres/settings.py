@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'University_Course'
+    'University_Course',
+    'Student'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'oscres.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django', 
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'oscres_db',
         'USER': 'root',
         'PASSWORD': 'Test123!',
