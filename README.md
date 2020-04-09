@@ -15,4 +15,16 @@
     `python3 manage.py runserver 0.0.0.0:8000`
     or add debug configuration for your preferred IDE
 
-7. access the site by "http://localhost:8000/hello"
+7. test the api response by postman:
+        GET http://127.0.0.1:8000/university_list/
+
+        POST http://127.0.0.1:8000/recommendation/
+        {
+            "name": "Norman",
+            "preferred_country": "UK",
+            "ielts_score": 3.8
+        }
+
+    or by curl
+        curl -H 'Accept: application/json; indent=4' http://127.0.0.1:8000/university_list/
+        curl -H 'Accept: application/json; indent=4' -X POST -d '{"name": "Norman","preferred_country": "UK","ielts_score": 3.8}' http://127.0.0.1:8000/recommendation/
