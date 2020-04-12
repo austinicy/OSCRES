@@ -1,6 +1,6 @@
 from pyknow import *
 
-class University_Course_F(Fact):
+class UniversityCourse_F(Fact):
     name = Field(str)
     country = Field(str)
     city = Field(str)
@@ -26,7 +26,7 @@ class Recommendation(KnowledgeEngine):
         self.recommended = False
 
     @Rule(AS.s << Student_F(IELTS_score = MATCH.IELTS_score), 
-        AS.u << University_Course_F(min_IELTS = MATCH.min_IELTS), 
+        AS.u << UniversityCourse_F(min_IELTS = MATCH.min_IELTS), 
         TEST(lambda IELTS_score, min_IELTS: IELTS_score >= min_IELTS), salience =1)
     def testRule1(self):
         print("you rock")
@@ -38,12 +38,23 @@ def do_recommendation(uni_list, student):
     for uni in uni_list:
         recommender_engine = Recommendation()
         recommender_engine.reset()
-        recommender_engine.declare(Student_F(IELTS_score=student.ielts_score))
-        recommender_engine.declare(University_Course_F(min_IELTS=uni["min_ielts"]))
+        recommender_engine.declare(mapStudentFact(student))
+        recommender_engine.declare(mapUniversityCourseFact(uni))
         recommender_engine.run()
         recommender_engine.facts
         if (recommender_engine.recommended):
-            recommendation_list.append(uni["name"])
+            recommendation_list.append(uni)
     return recommendation_list
 
 
+def mapStudentFact(student):
+    return Student_F(
+        IELTS_score = student["ielts_score"],
+        preferred_country = student["preferred_country"]
+        )
+
+def mapUniversityCourseFact(uni):
+    return UniversityCourse_F(
+        min_IELTS = uni["min_ielts"],
+        country = uni["country"]
+        )
