@@ -1,0 +1,9 @@
+{
+  "id": "5dafc88f-1b5a-49f2-a239-42b43ccbcdcd",
+  "name": "University",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": true
+}

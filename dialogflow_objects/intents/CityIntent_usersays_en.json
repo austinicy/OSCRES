@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1a7280c3-4de9-460b-a566-459220f06fb4",
+    "data": [
+      {
+        "text": "where on earth is $UniversityName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1b244921-1c04-4be2-a64d-d767274cbb0e",
+    "data": [
+      {
+        "text": "where is $UniversityName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "59ab30cb-a946-4c3a-88e8-59f3751e295f",
+    "data": [
+      {
+        "text": "which ",
+        "userDefined": false
+      },
+      {
+        "text": "city",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " is $UniversityName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "13aad000-b783-4bfa-9448-d2401c279958",
+    "data": [
+      {
+        "text": "what location is $UniversityName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4f3e2d59-a1ef-443c-9bc1-7f6a39ada8a2",
+    "data": [
+      {
+        "text": "what is the location of $UniversityName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
