@@ -1,22 +1,23 @@
 
 # Developer Guide
-1. install mysql 
+1. install mysql   
 2. run the `database_script.sql` 
-3. install django and sql driver:
-    conda install django
-    conda install mysqlclient
-4. instal pyknow:
-    clone the repo from "https://github.com/buguroo/pyknow.git"
-    go to the project directory and run `pip install .`
+3. install django and sql driver:  
+    `conda install django`  
+    `pip install djangorestframework`  
+    `conda install mysqlclient`
+4. instal pyknow:  
+    clone the repo from "https://github.com/buguroo/pyknow.git"  
+    go to the project directory and run `pip install .`  
 
-5. create database tables by running `table_setup.sh` bash
+5. create database tables by running `table_setup.sh` bash  
 
-6. debugging:
-    `python3 manage.py runserver 0.0.0.0:8000`
+6. debugging:  
+    `python3 manage.py runserver 0.0.0.0:8000`  
     or add debug configuration for your preferred IDE
 
-7. test the api response by postman:
-        GET http://127.0.0.1:8000/university_list/
+7. test the api response by postman:  
+        GET http://127.0.0.1:8000/university_list/  
 
         POST http://127.0.0.1:8000/recommendation/
         {
@@ -25,6 +26,6 @@
             "ielts_score": 3.8
         }
 
-    or by curl
-        curl -H 'Accept: application/json; indent=4' http://127.0.0.1:8000/university_list/
-        curl -H 'Accept: application/json; indent=4' -X POST -d '{"name": "Norman","preferred_country": "UK","ielts_score": 3.8}' http://127.0.0.1:8000/recommendation/
+    or by curl  
+        `curl -H 'Accept: application/json; indent=4' http://127.0.0.1:8000/university_list/`  
+        `curl -H 'Accept: application/json; indent=4' -X POST -d '{"name": "Norman","preferred_country": "UK","ielts_score": 3.8}' http://127.0.0.1:8000/recommendation/`

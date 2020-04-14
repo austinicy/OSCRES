@@ -1,0 +1,24 @@
+[
+  {
+    "value": "Computer Science",
+    "synonyms": [
+      "Computer Science",
+      "CS"
+    ]
+  },
+  {
+    "value": "Medicine",
+    "synonyms": [
+      "Medicine",
+      "Med"
+    ]
+  },
+  {
+    "value": "Accounting \u0026 Finance",
+    "synonyms": [
+      "Accounting \u0026 Finance",
+      "AF",
+      "A\u0026F"
+    ]
+  }
+]
