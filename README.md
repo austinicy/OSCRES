@@ -1,11 +1,15 @@
 
 # Developer Guide
-1. install mysql   
+1. install mysql  
+    make sure use legecy password authentication  
 2. run the `database_script.sql` 
 3. install django and sql driver:  
     `conda install django`  
     `pip install djangorestframework`  
-    `conda install mysqlclient`
+    `conda install mysqlclient`  
+    `pip install google-api-core`  
+    `pip install dialogflow`  
+
 4. instal pyknow:  
     clone the repo from "https://github.com/buguroo/pyknow.git"  
     go to the project directory and run `pip install .`  
