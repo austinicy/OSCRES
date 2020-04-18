@@ -3,24 +3,32 @@
 1. install mysql  
     make sure use legecy password authentication  
 2. run the `database_script.sql` 
-3. install django and sql driver:  
+3. install dependencies:  
     `conda install django`  
     `pip install djangorestframework`  
     `conda install mysqlclient`  
     `pip install google-api-core`  
     `pip install dialogflow`  
+    `pip install pandas`
 
 4. instal pyknow:  
     clone the repo from "https://github.com/buguroo/pyknow.git"  
     go to the project directory and run `pip install .`  
 
-5. create database tables by running `table_setup.sh` bash  
+    create the database based on   
+    `0_database_creation.sql`
 
-6. debugging:  
+5. create database tables by running below bash file
+    `1_table_setup.sh`  
+
+7. load data into tables by 
+    `python 2_table_load.py`
+
+8. debugging:  
     `python3 manage.py runserver 0.0.0.0:8000`  
     or add debug configuration for your preferred IDE
 
-7. test the api response by postman:  
+9. test the api response by postman:  
 
         GET http://127.0.0.1:8000/university_list/  
 
