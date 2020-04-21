@@ -1,9 +1,9 @@
 [
   {
-    "id": "1a7280c3-4de9-460b-a566-459220f06fb4",
+    "id": "9deef67f-df4e-4d22-9d62-dd48d9a95415",
     "data": [
       {
-        "text": "where on earth is $",
+        "text": "reputation of $",
         "userDefined": false
       },
       {
@@ -18,10 +18,10 @@
     "updated": 0
   },
   {
-    "id": "1b244921-1c04-4be2-a64d-d767274cbb0e",
+    "id": "e6f7aa97-f014-4285-ba05-5371b87b1c50",
     "data": [
       {
-        "text": "where is $",
+        "text": "what is the academic reputation of $",
         "userDefined": false
       },
       {
@@ -36,41 +36,10 @@
     "updated": 0
   },
   {
-    "id": "59ab30cb-a946-4c3a-88e8-59f3751e295f",
+    "id": "6d8e6baf-effb-4e76-884c-a172314d60ae",
     "data": [
       {
-        "text": "which ",
-        "userDefined": false
-      },
-      {
-        "text": "city",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " is $",
-        "userDefined": false
-      },
-      {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
-      },
-      {
-        "text": " in",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "13aad000-b783-4bfa-9448-d2401c279958",
-    "data": [
-      {
-        "text": "what location is $",
+        "text": "rank of $",
         "userDefined": false
       },
       {
@@ -81,14 +50,14 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "updated": 0
   },
   {
-    "id": "4f3e2d59-a1ef-443c-9bc1-7f6a39ada8a2",
+    "id": "11786c1c-45cd-4345-b738-ceeaecdea8c1",
     "data": [
       {
-        "text": "what is the location of $",
+        "text": "what is the rank of $",
         "userDefined": false
       },
       {

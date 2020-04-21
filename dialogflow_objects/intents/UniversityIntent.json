@@ -1,0 +1,80 @@
+{
+  "id": "be79fde3-4907-4a2a-b874-6429a1def388",
+  "name": "UniversityIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "c5744e09-6ebc-42d5-82ea-88454a7fae1b",
+          "required": false,
+          "dataType": "@Country",
+          "name": "Country",
+          "value": "$Country",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "76456288-e5a0-4bd2-ac79-105905e645ad",
+          "required": false,
+          "dataType": "@Subject",
+          "name": "Subject",
+          "value": "$Subject",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "a58a6c0a-722d-430f-92e1-5cd6052b9f2a",
+          "required": false,
+          "dataType": "@WorkStudy",
+          "name": "WorkStudy",
+          "value": "$WorkStudy",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "1f755748-2da4-474e-8f14-2feb39eb0d24",
+          "required": false,
+          "dataType": "@University",
+          "name": "UniversityName",
+          "value": "$UniversityName",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

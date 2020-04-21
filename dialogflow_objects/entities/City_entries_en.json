@@ -8,13 +8,175 @@
   {
     "value": "Leeds",
     "synonyms": [
-      "Leeds"
+      "Leeds",
+      "leed"
     ]
   },
   {
     "value": "Gothenburg",
     "synonyms": [
       "Gothenburg"
+    ]
+  },
+  {
+    "value": "Auckland",
+    "synonyms": [
+      "Auckland",
+      "auckland"
+    ]
+  },
+  {
+    "value": "Palmerston North",
+    "synonyms": [
+      "Palmerston North",
+      "palmerston"
+    ]
+  },
+  {
+    "value": "Melbourne",
+    "synonyms": [
+      "Melbourne"
+    ]
+  },
+  {
+    "value": "Gothenburg",
+    "synonyms": [
+      "Gothenburg"
+    ]
+  },
+  {
+    "value": "Durham",
+    "synonyms": [
+      "Durham"
+    ]
+  },
+  {
+    "value": "Stockholm",
+    "synonyms": [
+      "Stockholm"
+    ]
+  },
+  {
+    "value": "Bailrigg",
+    "synonyms": [
+      "Bailrigg",
+      "bailrig"
+    ]
+  },
+  {
+    "value": "Paris",
+    "synonyms": [
+      "Paris"
+    ]
+  },
+  {
+    "value": "Sheffield",
+    "synonyms": [
+      "Sheffield"
+    ]
+  },
+  {
+    "value": "Bergen",
+    "synonyms": [
+      "Bergen"
+    ]
+  },
+  {
+    "value": "Bristol",
+    "synonyms": [
+      "Bristol"
+    ]
+  },
+  {
+    "value": "Geneva",
+    "synonyms": [
+      "Geneva"
+    ]
+  },
+  {
+    "value": "Glasgow",
+    "synonyms": [
+      "Glasgow"
+    ]
+  },
+  {
+    "value": "Brighton",
+    "synonyms": [
+      "Brighton"
+    ]
+  },
+  {
+    "value": "Zurich",
+    "synonyms": [
+      "Zurich"
+    ]
+  },
+  {
+    "value": "Uppsala",
+    "synonyms": [
+      "Uppsala"
+    ]
+  },
+  {
+    "value": "Boston",
+    "synonyms": [
+      "Boston"
+    ]
+  },
+  {
+    "value": "California",
+    "synonyms": [
+      "California"
+    ]
+  },
+  {
+    "value": "New York",
+    "synonyms": [
+      "New York",
+      "NY City",
+      "NY"
+    ]
+  },
+  {
+    "value": "Charlotte",
+    "synonyms": [
+      "Charlotte"
+    ]
+  },
+  {
+    "value": "Georgia",
+    "synonyms": [
+      "Georgia"
+    ]
+  },
+  {
+    "value": "Baltimore",
+    "synonyms": [
+      "Baltimore"
+    ]
+  },
+  {
+    "value": "Indianapolis",
+    "synonyms": [
+      "Indianapolis"
+    ]
+  },
+  {
+    "value": "Chicago",
+    "synonyms": [
+      "Chicago"
+    ]
+  },
+  {
+    "value": "Dallas",
+    "synonyms": [
+      "Dallas"
+    ]
+  },
+  {
+    "value": "Tulsa",
+    "synonyms": [
+      "Tulsa"
     ]
   }
 ]

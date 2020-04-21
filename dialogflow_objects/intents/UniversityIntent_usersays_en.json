@@ -1,0 +1,93 @@
+[
+  {
+    "id": "27126d9f-a7db-4059-8be5-778453cccea4",
+    "data": [
+      {
+        "text": "which ",
+        "userDefined": false
+      },
+      {
+        "text": "universities",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " provide work study ",
+        "userDefined": false
+      },
+      {
+        "text": "program",
+        "alias": "WorkStudy",
+        "meta": "@WorkStudy",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "university",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4f8328c8-944d-495f-b4f1-18e8cc626684",
+    "data": [
+      {
+        "text": "what ",
+        "userDefined": false
+      },
+      {
+        "text": "universities",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " provide $",
+        "userDefined": false
+      },
+      {
+        "text": "Subject",
+        "alias": "Subject",
+        "meta": "@Subject",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0d917dc7-0a1f-4b95-ac99-282d91058bb0",
+    "data": [
+      {
+        "text": "what ",
+        "userDefined": false
+      },
+      {
+        "text": "universities",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " are there in $",
+        "userDefined": false
+      },
+      {
+        "text": "Country",
+        "alias": "Country",
+        "meta": "@Country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "516dcd51-7b8e-400e-969f-682140371920",
+    "data": [
+      {
+        "text": "employer reputation of ",
+        "userDefined": false
+      },
+      {
+        "text": "university",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a178a5bb-6355-4ead-9989-8079852919b9",
+    "data": [
+      {
+        "text": "what is the employer reputation of ",
+        "userDefined": false
+      },
+      {
+        "text": "university",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

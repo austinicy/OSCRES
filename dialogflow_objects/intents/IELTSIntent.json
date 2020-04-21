@@ -1,6 +1,6 @@
 {
-  "id": "e3f9c086-078b-426f-98d3-5b876b009541",
-  "name": "CityIntent",
+  "id": "ea802ed9-e3cc-4cc7-832d-d876141da77f",
+  "name": "IELTSIntent",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c6042760-a1c5-44fc-868c-f84bd327a347",
+          "id": "981b86f0-f0db-4f75-9f7c-713c268f4351",
           "required": false,
           "dataType": "@University",
           "name": "UniversityName",
@@ -18,7 +18,7 @@
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
           "outputDialogContexts": [],
-          "isList": true
+          "isList": false
         }
       ],
       "messages": [
@@ -26,7 +26,7 @@
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": "london"
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},

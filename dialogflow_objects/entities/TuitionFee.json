@@ -1,0 +1,9 @@
+{
+  "id": "d9e5203b-7756-4437-bad1-58154d68138f",
+  "name": "TuitionFee",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

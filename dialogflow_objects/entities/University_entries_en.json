@@ -1,15 +1,309 @@
 [
   {
-    "value": "LANCASTER UNIVERSITY",
-    "synonyms": [
-      "LANCASTER"
-    ]
-  },
-  {
     "value": "California Institute of Technology",
     "synonyms": [
       "California Institute of Technology",
       "CIT"
+    ]
+  },
+  {
+    "value": "AUCKLAND UNIVERSITY OF TECHNOLOGY",
+    "synonyms": [
+      "AUCKLAND UNIVERSITY OF TECHNOLOGY",
+      "AUT"
+    ]
+  },
+  {
+    "value": "MASSEY UNIVERSITY",
+    "synonyms": [
+      "MASSEY UNIVERSITY",
+      "Massey U",
+      "Massey"
+    ]
+  },
+  {
+    "value": "MONASH UNIVERSITY",
+    "synonyms": [
+      "MONASH UNIVERSITY",
+      "University of Monash"
+    ]
+  },
+  {
+    "value": "THE UNIVERSITY OF MELBOURNE",
+    "synonyms": [
+      "THE UNIVERSITY OF MELBOURNE",
+      "university of melbourne",
+      "UOM"
+    ]
+  },
+  {
+    "value": "CHALMERS UNIVERSITY OF TECHNOLOGY",
+    "synonyms": [
+      "CHALMERS UNIVERSITY OF TECHNOLOGY",
+      "Chalmers"
+    ]
+  },
+  {
+    "value": "DURHAM UNIVERSITY",
+    "synonyms": [
+      "DURHAM UNIVERSITY",
+      "Durham U",
+      "University of Durham",
+      "Durham"
+    ]
+  },
+  {
+    "value": "ROYAL INSTITUTE OF TECHNOLOGY",
+    "synonyms": [
+      "ROYAL INSTITUTE OF TECHNOLOGY",
+      "KTH"
+    ]
+  },
+  {
+    "value": "LANCASTER UNIVERSITY",
+    "synonyms": [
+      "LANCASTER UNIVERSITY",
+      "University of Lancaster",
+      "Lancaster"
+    ]
+  },
+  {
+    "value": "SORBONNE UNIVERSITY",
+    "synonyms": [
+      "SORBONNE UNIVERSITY",
+      "Sorbonne Université",
+      "Sorbonne"
+    ]
+  },
+  {
+    "value": "STOCKHOLM UNIVERSITY",
+    "synonyms": [
+      "STOCKHOLM UNIVERSITY",
+      "Stockholms universitet"
+    ]
+  },
+  {
+    "value": "THE UNIVERSITY OF SHEFFIELD",
+    "synonyms": [
+      "THE UNIVERSITY OF SHEFFIELD",
+      "Sheffield University",
+      "University College of Sheffield",
+      "Sheffield"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF BERGEN",
+    "synonyms": [
+      "UNIVERSITY OF BERGEN",
+      "Universitetet i Bergen",
+      "Bergen"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF BRISTOL",
+    "synonyms": [
+      "UNIVERSITY OF BRISTOL",
+      "Bristol University",
+      "Bristol"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF GENEVA",
+    "synonyms": [
+      "UNIVERSITY OF GENEVA",
+      "Université de Genève",
+      "geneva"
+    ]
+  },
+  {
+    "value": "University of Glasgow",
+    "synonyms": [
+      "University of Glasgow",
+      "UoG",
+      "Glas"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF LEEDS",
+    "synonyms": [
+      "UNIVERSITY OF LEEDS",
+      "Leeds"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF OSLO",
+    "synonyms": [
+      "UNIVERSITY OF OSLO",
+      "UiO",
+      "Universitetet i Oslo",
+      "Oslo"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF SUSSEX",
+    "synonyms": [
+      "UNIVERSITY OF SUSSEX",
+      "Sussex",
+      "Sussex University"
+    ]
+  },
+  {
+    "value": "UNIVERSITY OF ZURICH",
+    "synonyms": [
+      "UNIVERSITY OF ZURICH",
+      "UZH",
+      "Universität Zürich"
+    ]
+  },
+  {
+    "value": "UPPSALA UNIVERSITY",
+    "synonyms": [
+      "UPPSALA UNIVERSITY",
+      "Uppsala universitet"
+    ]
+  },
+  {
+    "value": "Boston University",
+    "synonyms": [
+      "Boston University",
+      "BU"
+    ]
+  },
+  {
+    "value": "Brandeis University",
+    "synonyms": [
+      "Brandeis University",
+      "Brandeis"
+    ]
+  },
+  {
+    "value": "Clark University",
+    "synonyms": [
+      "Clark University",
+      "Clark"
+    ]
+  },
+  {
+    "value": "Cornell University",
+    "synonyms": [
+      "Cornell University",
+      "Cornell"
+    ]
+  },
+  {
+    "value": "Duke University",
+    "synonyms": [
+      "Duke University",
+      "Duke"
+    ]
+  },
+  {
+    "value": "Georgia Institute of Technology",
+    "synonyms": [
+      "Georgia Institute of Technology",
+      "GIT",
+      "Georgia Tech"
+    ]
+  },
+  {
+    "value": "Harvard University",
+    "synonyms": [
+      "Harvard University",
+      "Harvard",
+      "harvard college"
+    ]
+  },
+  {
+    "value": "Johns Hopkins University",
+    "synonyms": [
+      "Johns Hopkins University",
+      "Johns Hopkins",
+      "JHU"
+    ]
+  },
+  {
+    "value": "New York University",
+    "synonyms": [
+      "New York University",
+      "NYU"
+    ]
+  },
+  {
+    "value": "Princeton University",
+    "synonyms": [
+      "Princeton University",
+      "Princeton"
+    ]
+  },
+  {
+    "value": "Purdue University",
+    "synonyms": [
+      "Purdue University",
+      "Purdue"
+    ]
+  },
+  {
+    "value": "Stanford University",
+    "synonyms": [
+      "Stanford University",
+      "Stanford"
+    ]
+  },
+  {
+    "value": "Stony Brook University",
+    "synonyms": [
+      "Stony Brook University",
+      "Stony Brook",
+      "SBU"
+    ]
+  },
+  {
+    "value": "University of Chicago",
+    "synonyms": [
+      "University of Chicago",
+      "UChicago",
+      "U of C",
+      "Chicago"
+    ]
+  },
+  {
+    "value": "University of Illinois at Urbana-Champaign",
+    "synonyms": [
+      "University of Illinois at Urbana-Champaign",
+      "U of I",
+      "Illinois"
+    ]
+  },
+  {
+    "value": "University of Southern California",
+    "synonyms": [
+      "University of Southern California",
+      "USC",
+      "SC",
+      "Southern Cal"
+    ]
+  },
+  {
+    "value": "University of Texas at Dallas",
+    "synonyms": [
+      "University of Texas at Dallas",
+      "UTD",
+      "UT Dallas"
+    ]
+  },
+  {
+    "value": "University of Tulsa",
+    "synonyms": [
+      "University of Tulsa",
+      "TU"
+    ]
+  },
+  {
+    "value": "Yale University",
+    "synonyms": [
+      "Yale University",
+      "Yale",
+      "University of Yale"
     ]
   }
 ]

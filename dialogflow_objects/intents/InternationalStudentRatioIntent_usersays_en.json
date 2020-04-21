@@ -1,0 +1,56 @@
+[
+  {
+    "id": "696c8c6f-77ea-4991-b536-00f98ae6917d",
+    "data": [
+      {
+        "text": "what is the ratio of international student in $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1d85ac12-eadc-40cd-a5ab-90f9c908a81d",
+    "data": [
+      {
+        "text": "how much international student are there in $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3d8b289b-ec41-460f-b8d0-678ef9d11f99",
+    "data": [
+      {
+        "text": "what is the international student percentage in $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
