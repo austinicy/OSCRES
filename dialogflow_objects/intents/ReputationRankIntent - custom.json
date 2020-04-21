@@ -1,0 +1,36 @@
+{
+  "id": "e9a8b355-bcde-49a9-87f4-8411e1172e51",
+  "parentId": "90444ffb-b9fb-4d08-9016-a5dd8f358ca6",
+  "rootParentId": "90444ffb-b9fb-4d08-9016-a5dd8f358ca6",
+  "name": "ReputationRankIntent - custom",
+  "auto": true,
+  "contexts": [
+    "ReputationRankIntent-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ReputationRankIntent.ReputationRankIntent-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

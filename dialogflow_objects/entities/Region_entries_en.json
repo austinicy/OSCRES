@@ -1,0 +1,23 @@
+[
+  {
+    "value": "Australia and New Zealand",
+    "synonyms": [
+      "ANZ",
+      "Australia and New Zealand"
+    ]
+  },
+  {
+    "value": "UK/Europe",
+    "synonyms": [
+      "UK/Europe",
+      "UK",
+      "Europe"
+    ]
+  },
+  {
+    "value": "Americas",
+    "synonyms": [
+      "Americas"
+    ]
+  }
+]

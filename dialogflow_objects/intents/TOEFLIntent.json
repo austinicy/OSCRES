@@ -1,6 +1,6 @@
 {
-  "id": "e3f9c086-078b-426f-98d3-5b876b009541",
-  "name": "CityIntent",
+  "id": "7458bede-3dab-43ba-9cdf-07be4f83b4d7",
+  "name": "TOEFLIntent",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c6042760-a1c5-44fc-868c-f84bd327a347",
+          "id": "6d02b304-593c-42f0-a077-0ffe0afad970",
           "required": false,
           "dataType": "@University",
           "name": "UniversityName",
@@ -18,7 +18,7 @@
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
           "outputDialogContexts": [],
-          "isList": true
+          "isList": false
         }
       ],
       "messages": [
@@ -26,7 +26,7 @@
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": "london"
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},

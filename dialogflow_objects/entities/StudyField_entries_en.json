@@ -1,0 +1,48 @@
+[
+  {
+    "value": "Business \u0026 Management Studies",
+    "synonyms": [
+      "Business \u0026 Management Studies",
+      "Business or  Management"
+    ]
+  },
+  {
+    "value": "Engineering",
+    "synonyms": [
+      "Engineering",
+      "Eng"
+    ]
+  },
+  {
+    "value": "Medicine",
+    "synonyms": [
+      "Medicine"
+    ]
+  },
+  {
+    "value": "Sciences",
+    "synonyms": [
+      "Sciences"
+    ]
+  },
+  {
+    "value": "Life Sciences",
+    "synonyms": [
+      "Life Sciences"
+    ]
+  },
+  {
+    "value": "Arts and Design",
+    "synonyms": [
+      "Arts and Design",
+      "Arts or Design"
+    ]
+  },
+  {
+    "value": "Arts \u0026 Social Sciences",
+    "synonyms": [
+      "Arts and Social Sciences",
+      "Social Sciences"
+    ]
+  }
+]

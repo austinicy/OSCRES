@@ -1,9 +1,45 @@
 [
   {
-    "id": "1a7280c3-4de9-460b-a566-459220f06fb4",
+    "id": "16c3abb9-0b11-445e-9a28-f54d7d6d2502",
     "data": [
       {
-        "text": "where on earth is $",
+        "text": "how is the campus in $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b3cbe9bc-c34c-4d43-8d3f-42b4359913df",
+    "data": [
+      {
+        "text": "campus setting of $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ee55eeea-daaa-406c-8b10-5907b4058e86",
+    "data": [
+      {
+        "text": "campus of $",
         "userDefined": false
       },
       {
@@ -18,84 +54,17 @@
     "updated": 0
   },
   {
-    "id": "1b244921-1c04-4be2-a64d-d767274cbb0e",
+    "id": "3b143506-f71f-498f-ad3a-aaa359c47b05",
     "data": [
       {
-        "text": "where is $",
+        "text": "how does the campus look like in $",
         "userDefined": false
       },
       {
         "text": "UniversityName",
         "alias": "UniversityName",
         "meta": "@University",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "59ab30cb-a946-4c3a-88e8-59f3751e295f",
-    "data": [
-      {
-        "text": "which ",
         "userDefined": false
-      },
-      {
-        "text": "city",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " is $",
-        "userDefined": false
-      },
-      {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
-      },
-      {
-        "text": " in",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "13aad000-b783-4bfa-9448-d2401c279958",
-    "data": [
-      {
-        "text": "what location is $",
-        "userDefined": false
-      },
-      {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "4f3e2d59-a1ef-443c-9bc1-7f6a39ada8a2",
-    "data": [
-      {
-        "text": "what is the location of $",
-        "userDefined": false
-      },
-      {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
       }
     ],
     "isTemplate": false,

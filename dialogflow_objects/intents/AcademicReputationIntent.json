@@ -1,6 +1,6 @@
 {
   "id": "90444ffb-b9fb-4d08-9016-a5dd8f358ca6",
-  "name": "ReputationRank",
+  "name": "AcademicReputationIntent",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "78737608-3da4-4899-b2c1-440b2121a97d",
+          "id": "9c8b66e0-72ef-43bf-a035-c17225ce11f9",
           "required": false,
           "dataType": "@University",
           "name": "UniversityName",

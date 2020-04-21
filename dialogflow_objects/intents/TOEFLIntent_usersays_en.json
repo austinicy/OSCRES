@@ -1,0 +1,56 @@
+[
+  {
+    "id": "e5e39761-8aa8-477a-9229-b957f795cb8d",
+    "data": [
+      {
+        "text": "what is the TOEFL requirement for $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3059b47b-000c-4017-9407-b43b24396d2f",
+    "data": [
+      {
+        "text": "what is the minimum TOEFL required for ",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2b6d586e-9b73-4113-a85c-ebd94448eaea",
+    "data": [
+      {
+        "text": "is there any minimum TOEFL requirement to enter ",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

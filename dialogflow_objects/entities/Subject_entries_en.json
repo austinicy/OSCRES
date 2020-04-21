@@ -18,7 +18,177 @@
     "synonyms": [
       "Accounting \u0026 Finance",
       "AF",
-      "A\u0026F"
+      "A\u0026F",
+      "Accounting",
+      "Finance"
+    ]
+  },
+  {
+    "value": "Business Study",
+    "synonyms": [
+      "Business Study",
+      "Business",
+      "Management",
+      "commerce",
+      "Operation Management",
+      "Strategy",
+      "Business \u0026 Management"
+    ]
+  },
+  {
+    "value": "Civil \u0026 Structure Engineering",
+    "synonyms": [
+      "Civil \u0026 Structure Engineering",
+      "Civil Engineering",
+      "Construction",
+      "Build Envrionment"
+    ]
+  },
+  {
+    "value": "Economics \u0026 Econometrics",
+    "synonyms": [
+      "Economics \u0026 Econometrics",
+      "Economics",
+      "Econs"
+    ]
+  },
+  {
+    "value": "Graphic Design",
+    "synonyms": [
+      "Graphic Design",
+      "Communication Design",
+      "Design",
+      "Visual Coomunication",
+      "Print Design",
+      "Advertising"
+    ]
+  },
+  {
+    "value": "Law",
+    "synonyms": [
+      "Law",
+      "LLB"
+    ]
+  },
+  {
+    "value": "Linguistics",
+    "synonyms": [
+      "Linguistics",
+      "Chinese",
+      "English",
+      "French",
+      "language",
+      "writing",
+      "news"
+    ]
+  },
+  {
+    "value": "Mechanical engineering",
+    "synonyms": [
+      "CAD",
+      "Mechanical engineering"
+    ]
+  },
+  {
+    "value": "Performing arts",
+    "synonyms": [
+      "Performing arts",
+      "dance",
+      "music",
+      "Sing",
+      "Song writing"
+    ]
+  },
+  {
+    "value": "Aeronautical Engineering",
+    "synonyms": [
+      "Aeronautical Engineering",
+      "aeronautical engineering"
+    ]
+  },
+  {
+    "value": "Architecture",
+    "synonyms": [
+      "Architecture",
+      "Arch"
+    ]
+  },
+  {
+    "value": "Chemical Engineering",
+    "synonyms": [
+      "Chemical Engineering"
+    ]
+  },
+  {
+    "value": "Geography",
+    "synonyms": [
+      "Geography",
+      "Geo",
+      "GIS",
+      "Geograph"
+    ]
+  },
+  {
+    "value": "Biological Sciences",
+    "synonyms": [
+      "Biological Sciences",
+      "Biology",
+      "life sciences"
+    ]
+  },
+  {
+    "value": "Electrical \u0026 Electronic Engineering",
+    "synonyms": [
+      "Electrical \u0026 Electronic Engineering",
+      "EEE",
+      "Electrical Engineering",
+      "Electronic Engineering"
+    ]
+  },
+  {
+    "value": "Mathematics \u0026 Statistics",
+    "synonyms": [
+      "Mathematics \u0026 Statistics",
+      "Mathematics",
+      "Math",
+      "Statistics",
+      "Stat"
+    ]
+  },
+  {
+    "value": "Communication \u0026 Media Studies",
+    "synonyms": [
+      "Communication \u0026 Media Studies",
+      "Communication",
+      "Medi Studies"
+    ]
+  },
+  {
+    "value": "Nutritional Science",
+    "synonyms": [
+      "Nutritional Science",
+      "Nutrition"
+    ]
+  },
+  {
+    "value": "Health Sciences",
+    "synonyms": [
+      "Health Sciences",
+      "Nursing"
+    ]
+  },
+  {
+    "value": "Engineering",
+    "synonyms": [
+      "Engineering"
+    ]
+  },
+  {
+    "value": "History, Philosophy \u0026 Theology",
+    "synonyms": [
+      "History, Philosophy \u0026 Theology",
+      "History",
+      "Philosophy"
     ]
   }
 ]

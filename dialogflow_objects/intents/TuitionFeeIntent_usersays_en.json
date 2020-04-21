@@ -1,64 +1,24 @@
 [
   {
-    "id": "1a7280c3-4de9-460b-a566-459220f06fb4",
+    "id": "4ac21070-8908-474a-874c-cd67db90e999",
     "data": [
       {
-        "text": "where on earth is $",
+        "text": "is it expensive to ",
         "userDefined": false
       },
       {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "1b244921-1c04-4be2-a64d-d767274cbb0e",
-    "data": [
-      {
-        "text": "where is $",
-        "userDefined": false
-      },
-      {
-        "text": "UniversityName",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "59ab30cb-a946-4c3a-88e8-59f3751e295f",
-    "data": [
-      {
-        "text": "which ",
-        "userDefined": false
-      },
-      {
-        "text": "city",
+        "text": "study",
         "meta": "@sys.ignore",
         "userDefined": false
       },
       {
-        "text": " is $",
+        "text": " in $",
         "userDefined": false
       },
       {
         "text": "UniversityName",
         "alias": "UniversityName",
         "meta": "@University",
-        "userDefined": true
-      },
-      {
-        "text": " in",
         "userDefined": false
       }
     ],
@@ -67,17 +27,17 @@
     "updated": 0
   },
   {
-    "id": "13aad000-b783-4bfa-9448-d2401c279958",
+    "id": "613bd756-468f-4bf7-8a86-0a2820487207",
     "data": [
       {
-        "text": "what location is $",
+        "text": "tuition fee of $",
         "userDefined": false
       },
       {
         "text": "UniversityName",
         "alias": "UniversityName",
         "meta": "@University",
-        "userDefined": true
+        "userDefined": false
       }
     ],
     "isTemplate": false,
@@ -85,17 +45,35 @@
     "updated": 0
   },
   {
-    "id": "4f3e2d59-a1ef-443c-9bc1-7f6a39ada8a2",
+    "id": "b4811a7b-8eb6-4872-bdb7-1e7dad999346",
     "data": [
       {
-        "text": "what is the location of $",
+        "text": "what is the tuition fee for $",
         "userDefined": false
       },
       {
         "text": "UniversityName",
         "alias": "UniversityName",
         "meta": "@University",
-        "userDefined": true
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a4770c8b-3621-41da-96ce-9e0d5ac61908",
+    "data": [
+      {
+        "text": "how much is the tuition fee for $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
       }
     ],
     "isTemplate": false,

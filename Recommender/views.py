@@ -44,9 +44,9 @@ def chat(request):
         response_json = json.loads(jsonObj)
         parameters = response_json['parameters']
         # parameter['UniversityName'], parameters['CourseType']
-        fulfillmentText = response_json['fulfillmentText']
         intent = response_json['intent']['displayName']
-        confidence = response_json['intentDetectionConfidence']
+        print("intent is {0}".format(intent))
+        print("parameters is {0}".format(parameters))
 
         # implement fulfillment
         output = do_fulfillment(intent, parameters)

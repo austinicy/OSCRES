@@ -1,0 +1,52 @@
+[
+  {
+    "value": "United States",
+    "synonyms": [
+      "United States",
+      "USA",
+      "US",
+      "America",
+      "United States of America"
+    ]
+  },
+  {
+    "value": "Australia",
+    "synonyms": [
+      "Australia"
+    ]
+  },
+  {
+    "value": "Sweden",
+    "synonyms": [
+      "Sweden"
+    ]
+  },
+  {
+    "value": "United Kingdom",
+    "synonyms": [
+      "United Kingdom",
+      "UK",
+      "Britain"
+    ]
+  },
+  {
+    "value": "France",
+    "synonyms": [
+      "France",
+      "French"
+    ]
+  },
+  {
+    "value": "Norway",
+    "synonyms": [
+      "Norway"
+    ]
+  },
+  {
+    "value": "Switzerland",
+    "synonyms": [
+      "Switzerland",
+      "swiss"
+    ]
+  }
+]
