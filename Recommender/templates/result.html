@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>Dear Student, Base on the evaluation, We sincerely recommend following courses to you</h2>
+    
+    {% for result in result_list %}
+        <li>{{ result.field_of_study }} -- {{ result.subject }}</li>
+    {% endfor %}
+
+    <div class="row">
+        <a href="/" class="btn btn-primary btn-lg btn-block">Back</a>
+    </div>
+{% endblock %}

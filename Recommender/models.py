@@ -8,7 +8,7 @@ class Student(models.Model):
 
 class University_Course(models.Model):
     id = models.PositiveSmallIntegerField(primary_key=True)
-    name = models.CharField(max_length=50, default="unknown")
+    name = models.CharField(max_length=50, db_column='university_name', default="unknown")
     country = models.CharField(max_length=20, default="unknown")
     population_size = models.CharField(max_length=20, default="unknown")
     age = models.PositiveSmallIntegerField(default = 0)
@@ -41,3 +41,6 @@ class University_Course(models.Model):
     average_tuition_fee = models.PositiveIntegerField(default = 0)
     offer_airport_pickup = models.BooleanField(default=False)
     acceptance_rate = models.FloatField(max_length=20, default=0.0)
+
+class Country(models.Model):
+    name = models.CharField(max_length=50)
