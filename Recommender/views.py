@@ -6,10 +6,12 @@ from dialogflow_client import do_dialogflow_analysis
 from fulfillment import do_fulfillment
 from django.shortcuts import render
 from .models import Student, University_Course
+
 from .serializers import StudentSerializer, University_CourseSerializer, CountrySerializer
 from google.protobuf.json_format import MessageToJson
 import json
 from django.db.models import Q
+
 
 @csrf_exempt
 def index(request):
@@ -82,12 +84,14 @@ def recommendation(request):
 @csrf_exempt
 def chat(request):
     if request.method =='POST':
+
         #request_data = JSONParser().parse(request)
         #enquiry_text = request_data['enquiry']
         question = request.POST['question']
 
         # get intent and slot detection from dialogflow client
         response = do_dialogflow_analysis(question)
+
 
         jsonObj = MessageToJson(response.query_result)  # type is google.cloud.dialogflow_v2.types.QueryResult
         response_json = json.loads(jsonObj)

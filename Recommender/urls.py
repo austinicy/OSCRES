@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+
 from .views import university_list, recommendation, chat
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     path('sendChat/', views.chat, name="sendChat"),
     path('university_list/', university_list),
     path('recommendation/', recommendation),
+    path('chat/', chat)
 ]

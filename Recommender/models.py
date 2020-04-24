@@ -42,5 +42,7 @@ class University_Course(models.Model):
     offer_airport_pickup = models.BooleanField(default=False)
     acceptance_rate = models.FloatField(max_length=20, default=0.0)
 
+
 class Country(models.Model):
     name = models.CharField(max_length=50)
+
