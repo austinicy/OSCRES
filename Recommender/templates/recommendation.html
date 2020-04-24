@@ -1,0 +1,466 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form id="recommend_form" action="/result/" method="POST">
+    {% csrf_token %}
+
+    <div class="form">
+        <div class="row">
+            <div class="col-md-12">
+                <label class="indicate-label">
+                    Please indicate your preference for the below criteria.
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label class="form-label">Do you have a prefer region?</label>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" name="region" id="region" required>
+                    <option value=""></option>
+                    {% for region in region_list %}
+                        <option value='{{ region.region }}'>{{ region.region }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Please choose a country.</label>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" name="country" id="country" required>
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Academic Reputation Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="academic_reputation_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="academic_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="academic_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="academic_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Employer Reputation Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="employer_reputation_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="employer_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="employer_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="employer_reputation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Faculty Student Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="faculty_student_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="faculty_student_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="faculty_student_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="faculty_student_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">International Faculty Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="international_faculty_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="international_faculty_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="international_faculty_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="international_faculty_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">International Student Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="international_student_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="international_student_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="international_student_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="citation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Citation Rank</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" name="citation_rank" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" name="citation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" name="citation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" name="citation_rank">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Please indicate your IELTS score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="ielts" id="ielts" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Please indicate your TOEFL score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="toefl" id="toefl" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Offer Work Study Program</label>
+            <div class="col-md-8 row right">
+                <div class="col-4">
+                    <label class="container">Yes
+                        <input type="radio" value="yes" id="work_study_yes" name="work_study" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-4">
+                    <label class="container">No
+                        <input type="radio" value="no" id="work_study_no" name="work_study">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-4">
+                    <label class="container">None
+                        <input type="radio" value="none" id="work_study_none" name="work_study">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Average Tution Fee</label>
+            <div class="col-md-8 row right">
+                <div class="col-4">
+                    <select name="min_tution_fee" id="min_tution_fee">
+                        <option value=""></option>
+                        {% with ''|center:8 as range %}
+                        {% for _ in range %}
+                        <option value="{{ forloop.counter }}0000">{{ forloop.counter }}0000</option>
+                        {% endfor%}
+                        {% endwith %}
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label> -- </label>
+                </div>
+                <div class="col-4">
+                    <select name="max_tution_fee" id="max_tution_fee">
+                        <option value=""></option>
+                        {% with ''|center:8 as range %}
+                        {% for _ in range %}
+                        <option value="{{ forloop.counter }}0000">{{ forloop.counter }}0000</option>
+                        {% endfor%}
+                        {% endwith %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">International Student Percentage</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High
+                        <input type="radio" value="high" id="int_student_percentage_high" name="international_student_percentage" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media
+                        <input type="radio" value="media" id="int_student_percentage_media" name="international_student_percentage">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low
+                        <input type="radio" value="low" id="int_student_percentage_low" name="international_student_percentage">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" id="int_student_percentage_none" name="international_student_percentage">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <label class="col-md-4 form-label">Cost Of Living</label>
+            <div class="col-md-8 row right">
+                <div class="col-3">
+                    <label class="container">High ( 80 - 100 )
+                        <input type="radio" value="high" id="cost_index_high" name="cost_index" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Media ( 60 - 80 )
+                        <input type="radio" value="media" id="cost_index_media" name="cost_index">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">Low ( < 60 )
+                        <input type="radio" value="low" id="cost_index_low" name="cost_index">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-3">
+                    <label class="container">None
+                        <input type="radio" value="none" id="cost_index_none" name="cost_index">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <HR align=center width="100%" SIZE=20 NOSHADE>
+    </div>
+
+    <div class="margin-div">
+        <input type="button" name="courses-btn" id="courses-btn" class="btn btn-lg btn-primary" value="Courses">
+    </div>
+
+    <div id="courses-div" class="form" style="display:none">
+        <div class="row">
+            <div class="col-12">
+                <label class="indicate-label">Please provide your courses in order to server you better.</label>
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Math score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="math" id="math" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Chinese score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="chinese" id="chinese" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">English score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="english" id="english" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Physics score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="physics" id="physics" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Chemistry score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="chemistry" id="chemistry" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Biology score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="biology" id="biology" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">History score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="history" id="history" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Geogrophy score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="geogrophy" id="geogrophy" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Politics score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="politics" id="politics" type="text" value="">
+            </div>
+        </div>
+
+        <div class="row min-pad">
+            <div class="col-md-4">
+                <label class="form-label">Art score(if avaiable).</label>
+            </div>
+            <div class="col-md-8">
+                <input name="art" id="art" type="text" value="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <button type="submit" name="submit" id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+    </div>
+
+</form>
+{% endblock %}
