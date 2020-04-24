@@ -53,7 +53,7 @@ function sendChat() {
     $.ajax({
         url: '/sendChat/',
         data: {
-            'question': question
+            'enquiry': question
         },
         type: 'POST',
         success: function (data) {

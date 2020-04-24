@@ -8,7 +8,7 @@ class Student(models.Model):
 
 class University_Course(models.Model):
     id = models.PositiveSmallIntegerField(primary_key=True)
-    name = models.CharField(max_length=50, db_column='university_name', default="unknown")
+    name = models.CharField(max_length=50, default="unknown")
     country = models.CharField(max_length=20, default="unknown")
     population_size = models.CharField(max_length=20, default="unknown")
     age = models.PositiveSmallIntegerField(default = 0)

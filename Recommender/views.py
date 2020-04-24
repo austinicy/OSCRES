@@ -84,13 +84,18 @@ def recommendation(request):
 @csrf_exempt
 def chat(request):
     if request.method =='POST':
-
-        #request_data = JSONParser().parse(request)
-        #enquiry_text = request_data['enquiry']
-        question = request.POST['question']
+        enquiry_text =''
+        try:
+            request_data = JSONParser().parse(request) # for api calls from jmeter and postman
+            enquiry_text = request_data['enquiry']
+        except:
+            enquiry_text = request.POST['enquiry']
+        
+        if enquiry_text == '':
+            raise Exception('Cannot detect enquiry')
 
         # get intent and slot detection from dialogflow client
-        response = do_dialogflow_analysis(question)
+        response = do_dialogflow_analysis(enquiry_text)
 
 
         jsonObj = MessageToJson(response.query_result)  # type is google.cloud.dialogflow_v2.types.QueryResult
