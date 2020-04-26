@@ -10,6 +10,7 @@ from .models import Student, University_Course
 from .serializers import StudentSerializer, University_CourseSerializer, CountrySerializer
 from google.protobuf.json_format import MessageToJson
 import json
+import time
 from django.db.models import Q
 
 
@@ -86,7 +87,8 @@ def chat(request):
     if request.method =='POST':
         enquiry_text =''
         try:
-            request_data = JSONParser().parse(request) # for api calls from jmeter and postman
+            #request_data = JSONParser().parse(request) # for api calls from jmeter and postman
+            request_data = json.loads(request.body.decode('utf-8'))
             enquiry_text = request_data['enquiry']
         except:
             enquiry_text = request.POST['enquiry']
@@ -96,7 +98,6 @@ def chat(request):
 
         # get intent and slot detection from dialogflow client
         response = do_dialogflow_analysis(enquiry_text)
-
 
         jsonObj = MessageToJson(response.query_result)  # type is google.cloud.dialogflow_v2.types.QueryResult
         response_json = json.loads(jsonObj)
@@ -108,6 +109,7 @@ def chat(request):
 
         # implement fulfillment
         output = do_fulfillment(intent, parameters)
+        time.sleep(2)
         return HttpResponse(output)
 
         

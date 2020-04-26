@@ -13,13 +13,19 @@
 
     <script src="{% static 'js/recommendation.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/recommendation.css' %}">
+    <script>
+        var loadingurl = "{% static 'img/loading.gif' %}";
+    </script>
 </head>
 
 <body>
     <header>
         <div class="base-header">
-            <h1>OSCRS</h1>
+            <h1>OSCRES</h1>
             <h2>Overseas Study Course Recommendation System​</h2>
+            <div class="offset-md-11">
+                <a href="/">Home</a>
+            </div>
         </div>
     </header>
 
@@ -27,8 +33,8 @@
     <div class="container-fluid">
         {% block content %}
         {% endblock %}
-        <br/>
-        <br/>
+        <br />
+        <br />
     </div>
     <!-- END Content -->
 

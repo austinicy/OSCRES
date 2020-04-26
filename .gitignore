@@ -1,3 +1,4 @@
+*.pyc
 __pycache__/*
 oscres/__pycache__/*
 Recommender/__pycache__/*
@@ -5,3 +6,4 @@ Recommender/migrations/*
 .vscode
 .ipynb_checkpoints
 .DS_Store
+*.pyc
