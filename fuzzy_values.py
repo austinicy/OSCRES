@@ -1,9 +1,9 @@
 
-low_academic_rank = [300, 500]
+low_academic_rank = [300, 600]
 medium_academic_rank = [100, 299]
 high_academic_rank = [1, 99]
 
-low_employer_rank = [300, 500]
+low_employer_rank = [300, 600]
 medium_employer_rank = [100, 299]
 high_employer_rank = [1, 99]
 

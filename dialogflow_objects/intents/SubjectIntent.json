@@ -7,7 +7,20 @@
     {
       "resetContexts": false,
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "b5c2ce6e-4526-4508-9150-4b85eb22758f",
+          "required": false,
+          "dataType": "@University",
+          "name": "UniversityName",
+          "value": "$UniversityName",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
       "messages": [
         {
           "type": 0,

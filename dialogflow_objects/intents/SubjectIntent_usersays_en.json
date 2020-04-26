@@ -1,0 +1,100 @@
+[
+  {
+    "id": "27cbf65a-4507-4a8c-902f-92f5f0115b61",
+    "data": [
+      {
+        "text": "what ",
+        "userDefined": false
+      },
+      {
+        "text": "subject",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " does $",
+        "userDefined": false
+      },
+      {
+        "text": "University",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " offer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9fc09dea-def9-47f2-9c62-a68375cd3919",
+    "data": [
+      {
+        "text": "what ",
+        "userDefined": false
+      },
+      {
+        "text": "subject",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " can I ",
+        "userDefined": false
+      },
+      {
+        "text": "study",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " in $",
+        "userDefined": false
+      },
+      {
+        "text": "University",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "407ebd3b-183a-40ff-934d-e2433f912b46",
+    "data": [
+      {
+        "text": "what ",
+        "userDefined": false
+      },
+      {
+        "text": "subject",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " does $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " offer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

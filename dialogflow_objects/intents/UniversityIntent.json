@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c5744e09-6ebc-42d5-82ea-88454a7fae1b",
+          "id": "badc9bdf-dc92-44b4-a85c-0b8933fc58ec",
           "required": false,
           "dataType": "@Country",
           "name": "Country",
@@ -21,7 +21,7 @@
           "isList": false
         },
         {
-          "id": "76456288-e5a0-4bd2-ac79-105905e645ad",
+          "id": "84bef0c6-7bf4-4cd5-9cf7-d9efd7344c96",
           "required": false,
           "dataType": "@Subject",
           "name": "Subject",
@@ -33,9 +33,9 @@
           "isList": false
         },
         {
-          "id": "a58a6c0a-722d-430f-92e1-5cd6052b9f2a",
+          "id": "54afd568-de09-499e-bd33-ed7a04e30414",
           "required": false,
-          "dataType": "@WorkStudy",
+          "dataType": "@sys.any",
           "name": "WorkStudy",
           "value": "$WorkStudy",
           "promptMessages": [],
@@ -45,11 +45,47 @@
           "isList": false
         },
         {
-          "id": "1f755748-2da4-474e-8f14-2feb39eb0d24",
+          "id": "828a4d98-da74-4371-9b9a-f0354c0eba96",
           "required": false,
-          "dataType": "@University",
-          "name": "UniversityName",
-          "value": "$UniversityName",
+          "dataType": "@sys.any",
+          "name": "TuitionFee",
+          "value": "$TuitionFee",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "631cfd4b-473b-482c-a6b1-c439c00e3707",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "CostOfLiving",
+          "value": "$CostOfLiving",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "f06f317f-e76b-4b0e-8e72-0c17153cdc5f",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "AcademicRank",
+          "value": "$AcademicRank",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "f7053a01-e3a1-4fca-8c1c-1c8c75039c80",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "EmployerRank",
+          "value": "$EmployerRank",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],

@@ -157,8 +157,13 @@ def do_fulfillment(intent, params):
             return "{0} offers below fields of study: \n{1}".format(params['UniversityName'], fields)
         return default_response
 
-    if intent=='StudyFieldIntent':
-        pass
+    if intent=='SubjectIntent':
+        default_response = 'I am sorry, please specify a proper university'
+        if params['UniversityName']:
+            unis = University_Course.objects.filter(name__icontains=params['UniversityName']).values()
+            subjects = join(unis, "subject")
+            return "{0} offers below subjects: \n{1}".format(params['UniversityName'], subjects)
+        return default_response
 
     if intent=='UniversityIntent':
         default_response = 'I am sorry, but I do not understand your question. Please try again'
@@ -179,17 +184,49 @@ def do_fulfillment(intent, params):
             unis = University_Course.objects.filter(average_tuition_fee__gte = fuzzy_values.low_tuition_fee[0]).filter(average_tuition_fee__lte = fuzzy_values.low_tuition_fee[1]).values()
             uni_names = join(unis, "name")
             return "Below universities are having relatively cheaper tuition fees: \n{0}".format(uni_names)
+        if params['TuitionFee'] =='medium':
+            unis = University_Course.objects.filter(average_tuition_fee__gte = fuzzy_values.medium_tuition_fee[0]).filter(average_tuition_fee__lte = fuzzy_values.medium_tuition_fee[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having medium tuition fees: \n{0}".format(uni_names)
+        if params['TuitionFee'] =='higher':
+            unis = University_Course.objects.filter(average_tuition_fee__gte = fuzzy_values.high_tuition_fee[0]).filter(average_tuition_fee__lte = fuzzy_values.high_tuition_fee[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having relatively higher tuition fees: \n{0}".format(uni_names)
         if params['CostOfLiving'] =='lower':
             unis = University_Course.objects.filter(cost_of_living_index__gte = fuzzy_values.low_cost_of_living[0]).filter(cost_of_living_index__lte = fuzzy_values.low_cost_of_living[1]).values()
             uni_names = join(unis, "name")
             return "Below universities are located in relatively cheaper cities: \n{0}".format(uni_names)
+        if params['CostOfLiving'] =='medium':
+            unis = University_Course.objects.filter(cost_of_living_index__gte = fuzzy_values.medium_cost_of_living[0]).filter(cost_of_living_index__lte = fuzzy_values.medium_cost_of_living[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are located in average expensive cities: \n{0}".format(uni_names)
+        if params['CostOfLiving'] =='higher':
+            unis = University_Course.objects.filter(cost_of_living_index__gte = fuzzy_values.high_cost_of_living[0]).filter(cost_of_living_index__lte = fuzzy_values.high_cost_of_living[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are located in relatively more expensive cities: \n{0}".format(uni_names)
         if params['AcademicRank'] =='high':
             unis = University_Course.objects.filter(academic_reputation_rank__gte = fuzzy_values.high_academic_rank[0]).filter(academic_reputation_rank__lte = fuzzy_values.high_academic_rank[1]).values()
             uni_names = join(unis, "name")
-            return "Below universities are having higher academic reputation rank: \n{0}".format(uni_names)        
+            return "Below universities are having higher academic reputation rank: \n{0}".format(uni_names) 
+        if params['AcademicRank'] =='medium':
+            unis = University_Course.objects.filter(academic_reputation_rank__gte = fuzzy_values.medium_academic_rank[0]).filter(academic_reputation_rank__lte = fuzzy_values.medium_academic_rank[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having medium academic reputation rank: \n{0}".format(uni_names) 
+        if params['AcademicRank'] =='low':
+            unis = University_Course.objects.filter(academic_reputation_rank__gte = fuzzy_values.low_academic_rank[0]).filter(academic_reputation_rank__lte = fuzzy_values.low_academic_rank[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having lower academic reputation rank: \n{0}".format(uni_names)        
         if params['EmployerRank'] =='high':
             unis = University_Course.objects.filter(employer_reputation_rank__gte = fuzzy_values.high_employer_rank[0]).filter(employer_reputation_rank__lte = fuzzy_values.high_employer_rank[1]).values()
             uni_names = join(unis, "name")
-            return "Below universities are having higher employer reputation rank: \n{0}".format(uni_names)      
+            return "Below universities are having higher employer reputation rank: \n{0}".format(uni_names) 
+        if params['EmployerRank'] =='medium':
+            unis = University_Course.objects.filter(employer_reputation_rank__gte = fuzzy_values.medium_employer_rank[0]).filter(employer_reputation_rank__lte = fuzzy_values.medium_employer_rank[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having medium employer reputation rank: \n{0}".format(uni_names) 
+        if params['EmployerRank'] =='low':
+            unis = University_Course.objects.filter(employer_reputation_rank__gte = fuzzy_values.low_employer_rank[0]).filter(employer_reputation_rank__lte = fuzzy_values.low_employer_rank[1]).values()
+            uni_names = join(unis, "name")
+            return "Below universities are having lower employer reputation rank: \n{0}".format(uni_names)      
 
         return default_response
