@@ -165,3 +165,8 @@ body {
     height: 310px;
     overflow: auto;
 }
+
+a {
+    color:gold;
+    font-size: 20px;
+}

@@ -9,7 +9,11 @@
                 $("#courses-div").show()
             });
 
-            $("#sendChat").click(() => sendChat());
+            $("#sendChat").click(() => {
+                if (!$("#sendChat").prop("disabled")) {
+                    sendChat()
+                }
+            });
 
             $('#question').on("keyup", function (event) {
                 event.preventDefault();
@@ -50,21 +54,41 @@ function sendChat() {
     var content = "<div class='offset-md-10 user-message'>" + question + "</div>";
     $('#chatContent').append(content)
 
+    //generate a random number
+    var seqno = new Date().getTime()
+
     $.ajax({
         url: '/sendChat/',
         data: {
-            'enquiry': question
+            'enquiry': question,
+            'csrfmiddlewaretoken': $('[name="csrfmiddlewaretoken"]').val()
         },
         type: 'POST',
+        beforeSend: function () {
+            //disable submit button
+            $("#sendChat").attr({
+                disabled: "disabled"
+            })
+
+            //preloading image
+            var image = "<img id='loading' src='" + loadingurl + "'/>"
+            var content = "<div id='" + seqno + "' class='col-md-2 chat-message'>" + image + "</div>";
+            $("#chatContent").append(content)
+
+            //set content bottom
+            var div = document.getElementById('chatContent');
+            div.scrollTop = div.scrollHeight;
+        },
         success: function (data) {
             //2. append answers
             $("#question").val('')
-            var answer = '';
-            var content = "<div class='col-md-2 chat-message'>" + data + "</div>";
-            $('#chatContent').append(content)
 
-            var div = document.getElementById('chatContent');
-            div.scrollTop = div.scrollHeight;
+            //remove disalbe status
+            $("#sendChat").removeAttr('disabled')
+
+            //remove image and append result
+            $("#loading").remove()
+            $("#" + seqno).append(data)
         }
     });
 }
