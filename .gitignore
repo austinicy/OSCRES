@@ -1,5 +1,5 @@
 __pycache__/*
-oscres/*
+oscres/__pycache__/*
 Recommender/__pycache__/*
 Recommender/migrations/*
 .vscode
