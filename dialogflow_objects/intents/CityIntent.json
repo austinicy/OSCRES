@@ -9,7 +9,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c6042760-a1c5-44fc-868c-f84bd327a347",
+          "id": "b4251699-8b32-4bfb-88f7-a2f88a2f15b2",
           "required": false,
           "dataType": "@University",
           "name": "UniversityName",
@@ -18,7 +18,7 @@
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
           "outputDialogContexts": [],
-          "isList": true
+          "isList": false
         }
       ],
       "messages": [

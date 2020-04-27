@@ -27,8 +27,13 @@
 8. debugging:  
     `python3 manage.py runserver 0.0.0.0:8000`  
     or add debug configuration for your preferred IDE
+9. zip the folder dialogflow_objects and import the zip file into Google DialogFlow   
+10.  generate a json key file in the Google Dialoge page:   
+        General --> Service Account    
+        Click the 3 dots --> generate key file   
+    name file as 'project_key.json', put it into /SystemCode folder     
 
-9. test the api response by postman:  
+11. test the api response by postman:  
 
         GET http://127.0.0.1:8000/university_list/  
 

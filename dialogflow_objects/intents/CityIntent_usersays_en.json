@@ -1,5 +1,27 @@
 [
   {
+    "id": "d178073a-05ed-49ef-9ba0-3ddd2d98950f",
+    "data": [
+      {
+        "text": "which city is $",
+        "userDefined": false
+      },
+      {
+        "text": "University",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " located in",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "1a7280c3-4de9-460b-a566-459220f06fb4",
     "data": [
       {

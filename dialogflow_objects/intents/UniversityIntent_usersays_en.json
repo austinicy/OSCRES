@@ -1,35 +1,289 @@
 [
   {
-    "id": "27126d9f-a7db-4059-8be5-778453cccea4",
+    "id": "06ad3633-08a5-464f-b09e-cf69490b4c3d",
     "data": [
       {
-        "text": "which ",
+        "text": "what universities have a ",
         "userDefined": false
       },
       {
-        "text": "universities",
+        "text": "low",
+        "alias": "AcademicRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " academic rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2487849c-0964-4e8e-a6f9-6e6ef5f31288",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "medium",
+        "alias": "AcademicRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " academic rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6cbfa874-86ce-4ca0-8e04-2876d9660570",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "high",
+        "alias": "EmployerRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " employer rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e656989e-b51d-49c2-aa73-55bd7f6d62ad",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "medium",
+        "alias": "EmployerRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " employer rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "eec8c3e6-c368-4fc3-92e8-1d6f972381d7",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "low",
+        "alias": "EmployerRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " employer rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "03484f18-619f-4c8e-85ea-9c33114b842f",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "higher",
+        "alias": "CostOfLiving",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " cost of living",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f190071a-2f28-4da9-990f-186106036077",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "medium",
+        "alias": "CostOfLiving",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " cost of living",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "461a7142-fe6b-4d9b-a0bc-809f30893cb4",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "higher",
+        "alias": "TuitionFee",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " tuition fee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9d35cd36-d767-4dff-a51b-1c8cd9410635",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "medium",
+        "alias": "TuitionFee",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " tuition fee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "259f34bb-919b-415b-85c2-4b56ac5fb95a",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "high",
+        "alias": "AcademicRank",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " academic rank",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9b10e2c9-65dc-4ac7-a7d5-1d9b50a64095",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "lower",
+        "alias": "CostOfLiving",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " cost of living",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "21d0bbca-7989-4efc-9f7e-fa8817b2a4df",
+    "data": [
+      {
+        "text": "what universities have a ",
+        "userDefined": false
+      },
+      {
+        "text": "lower",
+        "alias": "TuitionFee",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " tuition fee",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "27126d9f-a7db-4059-8be5-778453cccea4",
+    "data": [
+      {
+        "text": "what universities",
         "meta": "@sys.ignore",
         "userDefined": false
       },
       {
-        "text": " provide work study ",
+        "text": " ",
         "userDefined": false
       },
       {
-        "text": "program",
+        "text": "provide",
         "alias": "WorkStudy",
-        "meta": "@WorkStudy",
+        "meta": "@sys.any",
         "userDefined": true
       },
       {
-        "text": " in ",
+        "text": " work study program",
         "userDefined": false
-      },
-      {
-        "text": "university",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -49,7 +303,7 @@
         "userDefined": false
       },
       {
-        "text": " provide $",
+        "text": " provide course in $",
         "userDefined": false
       },
       {

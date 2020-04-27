@@ -4,7 +4,7 @@ import dialogflow_v2 as dialogflow
 from google.api_core.exceptions import InvalidArgument
 
 def do_dialogflow_analysis(enquiry):
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'project_key.json'
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = './SystemCode/project_key.json'
 
     DIALOGFLOW_PROJECT_ID = 'oscres-wcbhwc'
     DIALOGFLOW_LANGUAGE_CODE = 'en'

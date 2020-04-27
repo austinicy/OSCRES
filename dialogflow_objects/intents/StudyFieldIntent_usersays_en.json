@@ -1,15 +1,28 @@
 [
   {
-    "id": "21342a37-13b8-45be-ab99-a085f99a3621",
+    "id": "cb0bd89b-a388-465c-b40d-2ae15d81e652",
     "data": [
       {
-        "text": "can I do work study in $",
+        "text": "what ",
         "userDefined": false
       },
       {
-        "text": "University",
+        "text": "study",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " field does $",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
         "alias": "UniversityName",
         "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " offer",
         "userDefined": false
       }
     ],
@@ -18,50 +31,14 @@
     "updated": 0
   },
   {
-    "id": "91df3973-8df4-4a44-81a6-83ac992b4ce1",
+    "id": "bfdfd93a-1ad0-4ea8-9253-cc1b8b99e6a2",
     "data": [
       {
-        "text": "does $",
+        "text": "what field can I ",
         "userDefined": false
       },
       {
-        "text": "University",
-        "alias": "UniversityName",
-        "meta": "@University",
-        "userDefined": false
-      },
-      {
-        "text": " offer ",
-        "userDefined": false
-      },
-      {
-        "text": "work study",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "26f0e7cb-095a-494b-8f5b-9dc571feb8ea",
-    "data": [
-      {
-        "text": "Is there ",
-        "userDefined": false
-      },
-      {
-        "text": "work study",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " ",
-        "userDefined": false
-      },
-      {
-        "text": "program",
+        "text": "study",
         "meta": "@sys.ignore",
         "userDefined": false
       },
@@ -73,6 +50,37 @@
         "text": "University",
         "alias": "UniversityName",
         "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ca8e05ee-6229-43c9-a799-f196c27f5e9c",
+    "data": [
+      {
+        "text": "what field of ",
+        "userDefined": false
+      },
+      {
+        "text": "study",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " does $",
+        "userDefined": false
+      },
+      {
+        "text": "University",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      },
+      {
+        "text": " offer",
         "userDefined": false
       }
     ],
