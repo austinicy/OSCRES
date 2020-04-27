@@ -1,4 +1,5 @@
 from pyknow import *
+from fuzzy_values import getAcademicRank, getEmployerRank
 
 class Match_F(Fact):
     pass
@@ -47,7 +48,8 @@ class Recommendation(KnowledgeEngine):
 
     @Rule(AS.s << Student_F(prefered_academic_reputation_rank = MATCH.prefered_academic_reputation_rank), 
         AS.u << UniversityCourse_F(academic_reputation_rank = MATCH.academic_reputation_rank), 
-        TEST(lambda prefered_academic_reputation_rank, academic_reputation_rank: prefered_academic_reputation_rank == academic_reputation_rank)|TEST(lambda prefered_academic_reputation_rank:prefered_academic_reputation_rank == ''), 
+        TEST(lambda prefered_academic_reputation_rank, academic_reputation_rank: getAcademicRank(prefered_academic_reputation_rank)[0] <= academic_reputation_rank and getAcademicRank(prefered_academic_reputation_rank)[1] >= academic_reputation_rank)|
+        TEST(lambda prefered_academic_reputation_rank:prefered_academic_reputation_rank == ''), 
         salience =5)
     def academicreputationrankRule(self):
         print('academicreputationrankRule')

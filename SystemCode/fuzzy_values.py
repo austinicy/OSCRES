@@ -34,3 +34,19 @@ high_cost_of_living = [101, 130]
 low_international_student_percentage = [0, 0.15]
 medium_international_student_percentage = [0.16, 0.3]
 high_international_student_percentage = [0.31, 0.5]
+
+def getAcademicRank(level):
+    if level == 'high':
+        return high_academic_rank
+    if level == 'medium':
+        return medium_academic_rank
+    if level == 'low':
+        return low_academic_rank
+
+def getEmployerRank(level):
+    if level == 'high':
+        return high_employer_rank
+    if level == 'medium':
+        return medium_employer_rank
+    if level == 'low':
+        return low_employer_rank
