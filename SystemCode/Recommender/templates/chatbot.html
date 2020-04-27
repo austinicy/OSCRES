@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% csrf_token %}
+<div id="app" class="container-fluid top-padding">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="chatContent" class="card message-box">
+        <div class="col-md-2 chat-message">
+          welcome to chatbot system, Please enter your questions?
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" id="question" class="form-control" placeholder="Send a message to the chatbot..."
+      aria-describedby="basic-addon2" />
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="submit" id="sendChat">Send</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

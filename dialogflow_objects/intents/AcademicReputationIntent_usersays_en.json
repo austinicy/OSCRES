@@ -1,5 +1,45 @@
 [
   {
+    "id": "667a9f08-6157-4f77-9e18-ed50b4f41378",
+    "data": [
+      {
+        "text": "how is the academic reputation of ",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "31cbca59-2cb4-4573-a824-3e011a88a1ee",
+    "data": [
+      {
+        "text": "does ",
+        "userDefined": false
+      },
+      {
+        "text": "UniversityName",
+        "alias": "UniversityName",
+        "meta": "@University",
+        "userDefined": true
+      },
+      {
+        "text": " have a good academic reputation",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "9deef67f-df4e-4d22-9d62-dd48d9a95415",
     "data": [
       {
