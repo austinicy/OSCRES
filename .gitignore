@@ -7,3 +7,4 @@ Recommender/migrations/*
 .ipynb_checkpoints
 .DS_Store
 *.pyc
+project_key.json

@@ -109,7 +109,6 @@ def chat(request):
 
         # implement fulfillment
         output = do_fulfillment(intent, parameters)
-        time.sleep(2)
         return HttpResponse(output)
 
         
