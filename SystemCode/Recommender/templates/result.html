@@ -4,8 +4,27 @@
 {% block content %}
     <h2>Dear Student, Base on the evaluation, We sincerely recommend following courses to you</h2>
     
+    {% if result_list %}
+        <div class="row">
+            <div class="col-md-4">
+                <label class="result-header">Name of University</label>
+            </div>
+            <div class="offset-md-1">
+                <label class="result-header">Subject</label>
+
+            </div>
+        </div>
+    {% endif %}
     {% for result in result_list %}
-        <li>{{ result.field_of_study }} -- {{ result.subject }}</li>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="result-content">{{ result.name }}</label>
+            </div>
+            <div class="offset-md-1">
+                <label class="result-content">{{ result.subject }}</label>
+
+            </div>
+        </div>
     {% endfor %}
 
     <div class="row">

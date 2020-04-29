@@ -73,7 +73,8 @@ def university_list(request):
 @csrf_exempt
 def recommendation(request):
     if request.method == 'POST':
-        request_data = JSONParser().parse(request)
+        #request_data = JSONParser().parse(request)
+        request_data = json.loads(json.dumps(request.POST))
         request_data['ielts'] = float(request_data['ielts'] or -1.0)
         request_data['toefl'] = float(request_data['toefl'] or -1.0)
         request_data['min_tution_fee'] = float(request_data['min_tution_fee'] or -1.0)
@@ -176,8 +177,9 @@ def recommendation(request):
         # get recommended list from the knowledge engine
         print(request_data)
         recommended_list = do_recommendation(uni_course_list, request_data)
+        print(recommended_list)
         serializer = University_CourseSerializer(recommended_list, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return render(request, 'result.html', {'result_list': recommended_list})
     return JsonResponse(serializer.errors, status = 404)
 
 @csrf_exempt
