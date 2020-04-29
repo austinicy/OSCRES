@@ -6,8 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OSCRS Admin</title>
+    <title>OSCRS </title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
@@ -19,18 +20,13 @@
 </head>
 
 <body>
-    <header>
-        <div class="base-header">
-            <h1>OSCRES</h1>
-            <h2>Overseas Study Course Recommendation System​</h2>
-            <div class="offset-md-11">
-                <a href="/">Home</a>
-            </div>
+    <div class="w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge titleHead">
+        <a href="/" class="title" >OSCRES</a>
         </div>
-    </header>
-
+    </div>
     <!-- Content -->
-    <div class="container-fluid">
+    <div>
         {% block content %}
         {% endblock %}
         <br />
