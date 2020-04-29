@@ -1,5 +1,5 @@
 from pyknow import *
-from fuzzy_values import getAcademicRank, getEmployerRank
+from fuzzy_values import *
 
 class Match_F(Fact):
     pass
@@ -24,15 +24,15 @@ class Recommendation(KnowledgeEngine):
         TEST(lambda prefered_region, region: prefered_region == region)|TEST(lambda prefered_region:prefered_region  == ''),
         salience =5)
     def regionRule(self):
-        print('regionRule')
-        self.declare(Match_F(is_prefered_region = True))   
+        print('    : regionRule')
+        self.declare(Match_F(is_prefered_region = True))
 
     @Rule(AS.s << Student_F(prefered_country = MATCH.prefered_country), 
         AS.u << UniversityCourse_F(country = MATCH.country), 
         TEST(lambda prefered_country, country: prefered_country == country)|TEST(lambda prefered_country:prefered_country  == ''),
         salience =5)
     def countryRule(self):
-        print('countryRule')
+        print('    : countryRule')
         self.declare(Match_F(is_prefered_country = True))
 
     @Rule(AS.s << Student_F(ielts = MATCH.ielts), 
@@ -43,56 +43,85 @@ class Recommendation(KnowledgeEngine):
         TEST(lambda toefl, min_TOEFL: toefl >= min_TOEFL)|TEST(lambda toefl:toefl <0),
         salience =5)
     def englishRule(self):
-        print('englishRule')
+        print('    : englishRule')
         self.declare(Match_F(satisfy_english = True))
 
     @Rule(AS.s << Student_F(prefered_academic_reputation_rank = MATCH.prefered_academic_reputation_rank), 
         AS.u << UniversityCourse_F(academic_reputation_rank = MATCH.academic_reputation_rank), 
-        TEST(lambda prefered_academic_reputation_rank, academic_reputation_rank: getAcademicRank(prefered_academic_reputation_rank)[0] <= academic_reputation_rank and getAcademicRank(prefered_academic_reputation_rank)[1] >= academic_reputation_rank)|
-        TEST(lambda prefered_academic_reputation_rank:prefered_academic_reputation_rank == ''), 
+        TEST(lambda prefered_academic_reputation_rank, academic_reputation_rank: 
+            prefered_academic_reputation_rank == 'none' or
+            (
+                getAcademicRank(prefered_academic_reputation_rank)[0] <= academic_reputation_rank and 
+                getAcademicRank(prefered_academic_reputation_rank)[1] >= academic_reputation_rank)
+            ),
         salience =5)
     def academicreputationrankRule(self):
-        print('academicreputationrankRule')
+        print('    : academicreputationrankRule')
         self.declare(Match_F(is_prefered_academic_reputation_rank = True))
 
     @Rule(AS.s << Student_F(prefered_employer_reputation_rank = MATCH.prefered_employer_reputation_rank), 
-        AS.u << UniversityCourse_F(employer_reputation_rank = MATCH.employer_reputation_rank), 
-        TEST(lambda prefered_employer_reputation_rank, employer_reputation_rank: prefered_employer_reputation_rank == employer_reputation_rank)|TEST(lambda prefered_employer_reputation_rank:prefered_employer_reputation_rank == ''), 
+        AS.u << UniversityCourse_F(employer_reputation_rank = MATCH.employer_reputation_rank),
+        TEST(lambda prefered_employer_reputation_rank, employer_reputation_rank:
+            prefered_employer_reputation_rank == 'none' or
+            (
+                getEmployerRank(prefered_employer_reputation_rank)[0] <= employer_reputation_rank and 
+                getEmployerRank(prefered_employer_reputation_rank)[1] >= employer_reputation_rank)
+            ),
         salience =5)
     def employerreputationrankRule(self):
-        print('employerreputationrankRule')
+        print('    : employerreputationrankRule')
         self.declare(Match_F(is_prefered_employer_reputation_rank = True))
 
     @Rule(AS.s << Student_F(prefered_faculty_student_rank = MATCH.prefered_faculty_student_rank), 
-        AS.u << UniversityCourse_F(faculty_student_rank = MATCH.faculty_student_rank), 
-        TEST(lambda prefered_faculty_student_rank, faculty_student_rank: prefered_faculty_student_rank == faculty_student_rank)|TEST(lambda prefered_faculty_student_rank:prefered_faculty_student_rank == ''), 
+        AS.u << UniversityCourse_F(faculty_student_rank = MATCH.faculty_student_rank),
+        TEST(lambda prefered_faculty_student_rank, faculty_student_rank:
+            prefered_faculty_student_rank == 'none' or
+            (
+                getFacultyStudentRank(prefered_faculty_student_rank)[0] <= faculty_student_rank and 
+                getFacultyStudentRank(prefered_faculty_student_rank)[1] >= faculty_student_rank)
+            ),
         salience =5)
     def facultystudentrankRule(self):
-        print('facultystudentrankRule')
+        print('    : facultystudentrankRule')
         self.declare(Match_F(is_prefered_faculty_student_rank = True))
 
     @Rule(AS.s << Student_F(prefered_international_faculty_rank = MATCH.prefered_international_faculty_rank), 
         AS.u << UniversityCourse_F(international_faculty_rank = MATCH.international_faculty_rank), 
-        TEST(lambda prefered_international_faculty_rank, international_faculty_rank: prefered_international_faculty_rank == international_faculty_rank)|TEST(lambda prefered_international_faculty_rank:prefered_international_faculty_rank == ''), 
+        TEST(lambda prefered_international_faculty_rank, international_faculty_rank:
+            prefered_international_faculty_rank == 'none' or
+            (
+                getInternationalFacultyRank(prefered_international_faculty_rank)[0] <= international_faculty_rank and 
+                getInternationalFacultyRank(prefered_international_faculty_rank)[1] >= international_faculty_rank)
+            ),
         salience =5)
     def internationalfacultyrankRule(self):
-        print('internationalfacultyrankRule')
+        print('    : internationalfacultyrankRule')
         self.declare(Match_F(is_prefered_international_faculty_rank = True))
 
     @Rule(AS.s << Student_F(prefered_international_student_rank = MATCH.prefered_international_student_rank), 
-        AS.u << UniversityCourse_F(international_faculty_rank = MATCH.international_faculty_rank), 
-        TEST(lambda prefered_international_student_rank, international_faculty_rank: prefered_international_student_rank == international_faculty_rank)|TEST(lambda prefered_international_student_rank:prefered_international_student_rank == ''), 
+        AS.u << UniversityCourse_F(international_student_rank = MATCH.international_student_rank),
+        TEST(lambda prefered_international_student_rank, international_student_rank: 
+            prefered_international_student_rank == 'none' or
+            (
+                getInternationalStudentRank(prefered_international_student_rank)[0] <= international_student_rank and 
+                getInternationalStudentRank(prefered_international_student_rank)[1] >= international_student_rank)
+            ),
         salience =5)
     def internationalstudentrankRule(self):
-        print('internationalstudentrankRule')
+        print('    : internationalstudentrankRule')
         self.declare(Match_F(is_prefered_international_student_rank = True))
 
     @Rule(AS.s << Student_F(prefered_citation_rank = MATCH.prefered_citation_rank), 
-        AS.u << UniversityCourse_F(citation_rank = MATCH.citation_rank), 
-        TEST(lambda prefered_citation_rank, citation_rank: prefered_citation_rank == citation_rank)|TEST(lambda prefered_citation_rank:prefered_citation_rank == ''), 
+        AS.u << UniversityCourse_F(citation_rank = MATCH.citation_rank),
+        TEST(lambda prefered_citation_rank, citation_rank:
+            prefered_citation_rank == 'none' or 
+            (
+                getCitationRank(prefered_citation_rank)[0] <= citation_rank and 
+                getCitationRank(prefered_citation_rank)[1] >= citation_rank)
+            ),
         salience =5)
     def citationrankRule(self):
-        print('citationrankRule')
+        print('    : citationrankRule')
         self.declare(Match_F(is_prefered_citation_rank = True))
 
     @Rule(AS.s << Student_F(prefered_min_tution_fee = MATCH.prefered_min_tution_fee), 
@@ -102,31 +131,42 @@ class Recommendation(KnowledgeEngine):
         TEST(lambda prefered_max_tution_fee, average_tuition_fee: prefered_max_tution_fee > average_tuition_fee)|TEST(lambda prefered_max_tution_fee:prefered_max_tution_fee <0), 
         salience =5)
     def tutionfeeRule(self):
-        print('tutionfeeRule')
+        print('    : tutionfeeRule')
         self.declare(Match_F(is_prefered_tuition_fee = True))
 
     @Rule(AS.s << Student_F(prefered_international_student_percentage = MATCH.prefered_international_student_percentage), 
         AS.u << UniversityCourse_F(international_student_percentage = MATCH.international_student_percentage), 
-        TEST(lambda prefered_international_student_percentage, international_student_percentage: prefered_international_student_percentage == international_student_percentage)|TEST(lambda prefered_international_student_percentage:prefered_international_student_percentage == ''), 
+        TEST(lambda prefered_international_student_percentage, international_student_percentage: 
+            prefered_international_student_percentage == 'none' or
+            (
+                getInternationalStudentPercentage(prefered_international_student_percentage)[0] <= international_student_percentage and 
+                getInternationalStudentPercentage(prefered_international_student_percentage)[1] >= international_student_percentage)
+            ), 
         salience =5)
     def internationalstudentpercentageRule(self):
-        print('internationalstudentpercentageRule')
+        print('    : internationalstudentpercentageRule')
         self.declare(Match_F(is_prefered_international_student_percentage = True))
 
     @Rule(AS.s << Student_F(prefered_cost_index = MATCH.prefered_cost_index), 
         AS.u << UniversityCourse_F(cost_of_living_index = MATCH.cost_of_living_index), 
-        TEST(lambda prefered_cost_index, cost_of_living_index: prefered_cost_index == cost_of_living_index)|TEST(lambda prefered_cost_index:prefered_cost_index == ''), 
+        TEST(lambda prefered_cost_index, cost_of_living_index: 
+            prefered_cost_index == 'none' or 
+            (
+                getCostOfLiving(prefered_cost_index)[0] <= cost_of_living_index and 
+                getCostOfLiving(prefered_cost_index)[1] >= cost_of_living_index)
+            ), 
         salience =5)
     def costoflivingRule(self):
-        print('costoflivingRule')
+        print('    : costoflivingRule')
         self.declare(Match_F(is_prefered_cost_index = True))
 
     @Rule(AS.s << Student_F(prefered_work_study = MATCH.prefered_work_study), 
         AS.u << UniversityCourse_F(offer_work_study_program = MATCH.offer_work_study_program), 
-        TEST(lambda prefered_work_study, offer_work_study_program: prefered_work_study == offer_work_study_program)|TEST(lambda prefered_work_study:prefered_work_study == ''), 
+        TEST(lambda prefered_work_study, offer_work_study_program: 
+            prefered_work_study == 'none' or getWorkStudy(prefered_work_study) == offer_work_study_program),
         salience =5)
     def workstudyRule(self):
-        print('workstudyRule')
+        print('    : workstudyRule')
         self.declare(Match_F(is_offering_work_study = True))
 
 #------------------------------------------------------------------------------------
@@ -151,6 +191,7 @@ class Recommendation(KnowledgeEngine):
         ,Match_F(is_offering_work_study = True)
         ), salience =4)
     def PreferredRule(self):
+        print("belong to [prefered]")
         self.prefered = True
 
     @Rule(AND(
@@ -165,6 +206,7 @@ class Recommendation(KnowledgeEngine):
         ,Match_F(is_prefered_citation_rank = True)
         ), salience =4)
     def AcademicSuggestedRule(self):
+        print("belong to [recommendedbyAcademic]")
         self.recommendedbyAcademic = True
 
     @Rule(AND(
@@ -175,6 +217,7 @@ class Recommendation(KnowledgeEngine):
         ,Match_F(is_offering_work_study = True)
         ), salience =4)
     def FinancialSuggestedRule(self):
+        print("belong to [recommendedbyFinancial]")
         self.recommendedbyFinancial = True
 
 
@@ -214,12 +257,12 @@ def do_recommendation(uni_list, student):
 
     field = field_recommendation(student)
 
-    recommender_engine = Recommendation()
     for uni in uni_list:
         if uni['name'] == uni_name:
             continue
         uni_name = uni['name'] 
-        print(uni_name)
+        print('matching for --> ', uni_name)
+        recommender_engine = Recommendation()
         recommender_engine.reset()
         recommender_engine.declare(mapStudentFact(student))
         recommender_engine.declare(mapUniversityCourseFact(uni))
@@ -313,4 +356,4 @@ def mapUniversityCourseFact(uni):
         international_student_percentage =  uni["international_student_percentage"],
         offer_work_study_program =  uni["offer_work_study_program"],
         average_tuition_fee =  uni["average_tuition_fee"]
-        )
+    )

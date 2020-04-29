@@ -46,6 +46,11 @@ function retrieveCountry() {
     });
 }
 
+function scrollTopResp() {
+    var div = document.getElementById('chatContent');
+    div.scrollTop = div.scrollHeight;
+}
+
 function sendChat() {
     var question = $("#question").val();
     if (question == '') return
@@ -76,8 +81,7 @@ function sendChat() {
             $("#chatContent").append(content)
 
             //set content bottom
-            var div = document.getElementById('chatContent');
-            div.scrollTop = div.scrollHeight;
+            scrollTopResp()
         },
         success: function (data) {
             //2. append answers
@@ -89,6 +93,9 @@ function sendChat() {
             //remove image and append result
             $("#loading").remove()
             $("#" + seqno).append(data)
+
+            //set content bottom
+            scrollTopResp()
         }
     });
 }
