@@ -1,0 +1,41 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.backgroundPix {
+    background-image: url(/static/img/background.jpg);
+    /* background-position: center; */
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.w3-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.title {
+    text-decoration: none !important;
+    font-size: 2em;
+    padding-left: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.titleHead {
+    background-color: rgba(1,112,192,0.7);
+}
+
+.titleFont {
+    font-size: 3em;
+    color:rgb(1,112,192);
+    font-weight: bold;
+}
+
+.titleText{
+    text-align: center;
+    margin-top:10em;
+    margin-bottom: 2em;
+}

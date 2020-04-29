@@ -4,10 +4,10 @@ body {
 
 .base-header, .base-footer {
     width: 100%;
-    color:gold;
+    color: white;
     padding: 10px 0;
     text-align: center;
-    background-color:steelblue;
+    background-color:rgba(1,112,192,0.7);
 }
 
 .base-header {
@@ -21,7 +21,9 @@ body {
 }
 
 .main-div {
-    padding: 100px;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 300px;
 }
 
 .margin-div {
