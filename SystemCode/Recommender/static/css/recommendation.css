@@ -45,9 +45,9 @@ body {
 
 .form-label {
     float: left;
-    color: #464646;
-    margin-bottom: 30px;
-    font-size: 22px;
+    color:rgb(1,112,192);
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .form input {
@@ -66,10 +66,11 @@ body {
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    /*font-size: 22px;*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -135,12 +136,16 @@ body {
 .user-message {
     border-radius: 10px;
     padding-left: 10px;
-	background-color: rgba(0, 67, 255, 0.33);
+    background-color: rgb(212, 241, 252);
 }
 
 .chat-message {
     border-radius: 10px;
-	background-color: rgba(128, 0, 95, 0.35);
+    background-color: white;
+    border-width: 0.5px;
+    margin-left: 1em;
+    margin-top: 1em;
+    width: 15em;
 }
 
 .send-btn {
@@ -183,4 +188,8 @@ a {
     font-weight: bold;;
     color:brown;
     font-size: 22px;
+}
+
+#loading{
+    width:80px;
 }
