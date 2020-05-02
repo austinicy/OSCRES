@@ -1,5 +1,5 @@
 
-python manage.py makemigrations
-python manage.py migrate
+python SystemCode/manage.py makemigrations
+python SystemCode/manage.py migrate
 
 

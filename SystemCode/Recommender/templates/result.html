@@ -2,32 +2,88 @@
 
 
 {% block content %}
-    <h2>Dear Student, Base on the evaluation, We sincerely recommend following courses to you</h2>
-    
-    {% if result_list %}
-        <div class="row">
-            <div class="col-md-4">
-                <label class="result-header">Name of University</label>
-            </div>
-            <div class="offset-md-1">
-                <label class="result-header">Subject</label>
-
+    <div class="container  box-border">
+        <label class="form-label" style="margin-top:30px;">Dear Student, base on the your preference, we would like to recommend the following courses:</label>
+        <div class="row col-md-12">
+            <div class="accordion" id="accordionExample">
+                {% for result in result_list  %}
+                <div class="card">
+                <div class="card-header" id="heading{{forloop.counter}}">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#courses{{forloop.counter}}" aria-expanded="true" aria-controls="courses{{forloop.counter}}">
+                        {{ result.name }} &nbsp; :  &nbsp;{{ result.subject }}
+                    </button>
+                    </h2>
+                </div>
+            
+                <div id="courses{{forloop.counter}}" class="collapse" aria-labelledby="heading{{forloop.counter}}" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Region</th>
+                                    <th scope="col">City</th>
+                                    <th scope="col">Population Size</th>
+                                    <th scope="col">Academic Reputation Rank</th>
+                                    <th scope="col">Faculty Student Rank</th>
+                                    <th scope="col">International Faculty Rank</th>
+                                    <th scope="col">International Student Rank</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{result.region}}</td>
+                                    <td>{{result.city}}</td>
+                                    <td>{{result.population_size}}</td>
+                                    <td>{{result.academic_reputation_rank}}</td>
+                                    <td>{{result.faculty_student_rank}}</td>
+                                    <td>{{result.international_faculty_rank}}</td>
+                                    <td>{{result.international_student_rank}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Cost of Living Index</th>
+                                    <th scope="col">International Student Percentage</th>
+                                    <th scope="col">Minimum IELTS</th>
+                                    <th scope="col">Minimum TOEFL</th>
+                                    <th scope="col">Offer Work Study Program</th>
+                                    <th scope="col">Average Tuition Fee (in local currency)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{result.cost_of_living_index}}</td>
+                                    <td>{{result.international_student_percentage}}</td>
+                                    <td>{{result.min_IELTS}}</td>
+                                    <td>{{result.min_TOEFL}}</td>
+                                    {% if result.offer_work_study_program == True  %}
+                                    <td>Yes</td>
+                                    {% else %}
+                                    <td>No</td>
+                                    {% endif %}
+                                    <td>{{result.average_tuition_fee}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-    {% endif %}
-    {% for result in result_list %}
-        <div class="row">
-            <div class="col-md-4">
-                <label class="result-content">{{ result.name }}</label>
-            </div>
-            <div class="offset-md-1">
-                <label class="result-content">{{ result.subject }}</label>
 
+        <div class="sectionMargin"></div>
+
+        <div class="row col-md-12" >
+            <div class="row col-md-5"></div>
+            <div class="row col-md-4" style="margin-bottom: 30px;">
+            <a href="/" class="btn btn-primary btn-lg btn-block">Back</a>
             </div>
+            <div class="row col-md"></div>
         </div>
-    {% endfor %}
 
-    <div class="row">
-        <a href="/" class="btn btn-primary btn-lg btn-block">Back</a>
     </div>
 {% endblock %}

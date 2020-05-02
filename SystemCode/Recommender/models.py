@@ -1,9 +1,32 @@
 from django.db import models
 
 class Student(models.Model):
-    name = models.CharField(max_length=50, default="unset")
-    preferred_country =  models.CharField(max_length=50, default="unset")
-    ielts_score = models.FloatField(max_length=50, default=0.0)
+    id = models.AutoField(primary_key=True)
+    region =  models.CharField(max_length=50, default="none")
+    country =  models.CharField(max_length=50, default="none")
+    academic_reputation_rank = models.CharField(max_length=50, default="none")
+    employer_reputation_rank = models.CharField(max_length=50, default="none")
+    faculty_student_rank = models.CharField(max_length=50, default="none")
+    international_faculty_rank = models.CharField(max_length=50, default="none")
+    international_student_rank = models.CharField(max_length=50, default="none")
+    citation_rank = models.CharField(max_length=50, default="none")
+    ielts = models.CharField(max_length=50, default="none")
+    toefl = models.CharField(max_length=50, default="none")
+    work_study = models.CharField(max_length=50, default="none")
+    min_tution_fee = models.CharField(max_length=50, default="none")
+    max_tution_fee = models.CharField(max_length=50, default="none")
+    international_student_percentage = models.CharField(max_length=50, default="none")
+    cost_index = models.CharField(max_length=50, default="none")
+    math = models.CharField(max_length=50, default="none")
+    chinese = models.CharField(max_length=50, default="none")
+    english = models.CharField(max_length=50, default="none")
+    physics = models.CharField(max_length=50, default="none")
+    chemistry = models.CharField(max_length=50, default="none")
+    biology = models.CharField(max_length=50, default="none")
+    history = models.CharField(max_length=50, default="none")
+    geogrophy = models.CharField(max_length=50, default="none")
+    politics = models.CharField(max_length=50, default="none")
+    art = models.CharField(max_length=50, default="none")
 
 
 class University_Course(models.Model):
