@@ -41,7 +41,7 @@ def result(request):
     min_tution_fee = request.POST['min_tution_fee']
     max_tution_fee = request.POST['max_tution_fee']
 
-    print("===>" + json.dumps(request.POST))
+    # print("===>" + json.dumps(request.POST))
 
     result_list = University_Course.objects.filter(region=region).all()
     if ielts:
@@ -72,9 +72,11 @@ def university_list(request):
 
 @csrf_exempt
 def recommendation(request):
+    # print(request)
     if request.method == 'POST':
         #request_data = JSONParser().parse(request)
         request_data = json.loads(json.dumps(request.POST))
+        print(request_data)
         request_data['ielts'] = float(request_data['ielts'] or -1.0)
         request_data['toefl'] = float(request_data['toefl'] or -1.0)
         request_data['min_tution_fee'] = float(request_data['min_tution_fee'] or -1.0)
