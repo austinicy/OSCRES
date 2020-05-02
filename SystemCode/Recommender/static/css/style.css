@@ -39,3 +39,31 @@ body, html {height: 100%}
     margin-top:10em;
     margin-bottom: 2em;
 }
+
+.box-border{
+    margin-top:2em;    
+    box-shadow: 5px 5px 30px;
+    border-radius: 10px;
+}
+
+.formTitle{
+    text-align: center;
+    color:  rgb(1,112,192);
+    margin-top: 0.5em;
+}
+
+.uniRankRadio{
+    margin-bottom: 1em;
+}
+
+.sectionMargin{
+    margin-bottom: 20px;
+}
+
+.nonRadio{
+    position: relative !important;
+    opacity: 100 !important;
+    cursor: pointer !important;
+    height: auto !important;
+    width: auto !important;
+}
