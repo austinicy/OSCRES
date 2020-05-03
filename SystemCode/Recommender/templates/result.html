@@ -3,15 +3,41 @@
 
 {% block content %}
     <div class="container  box-border">
-        <label class="form-label" style="margin-top:30px;">Dear Student, base on the your preference, we would like to recommend the following courses:</label>
+        {% if result_list%}
+            <label class="form-label" style="margin-top:30px;">Dear Student, base on the your preference, you are suitable for:</label>
+        {% else %}
+            <label class="form-label" style="margin-top:30px; color:red;">No matching subject based on your preference, please try again.</label>
+        {% endif %}
+
+        <div class = "row col-md-12" >
+            {% with result_list|first as first_doc %}
+                {% if first_doc.subject == "Unable to recommend based on your given subject scorings"%}
+                    <h5 style="text-align: center; color:red;"><b>{{ first_doc.subject}}</b></h5>
+                {% else %}
+                <h5 style="text-align: center;"><b>{{ first_doc.subject}}</b></h5>
+                {% endif %}
+            {% endwith %}
+        </div>
         <div class="row col-md-12">
+            {% with result_list|first as first_doc %}
+                {% if result_list and  first_doc.subject != "Unable to recommend based on your given subject scorings"%}
+                    <div class="row col-md-12">
+                        <label>Please checkout the recommended universities:</label>
+                    </div>
+                {% elif result_list %}
+                <div class="row col-md-12">
+                    <label>But, you can still checkout the recommended universities:</label>
+                </div>
+                {% else  %}
+                {% endif %}
+            {% endwith %}
             <div class="accordion" id="accordionExample">
                 {% for result in result_list  %}
                 <div class="card">
                 <div class="card-header" id="heading{{forloop.counter}}">
                     <h2 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#courses{{forloop.counter}}" aria-expanded="true" aria-controls="courses{{forloop.counter}}">
-                        {{ result.name }} &nbsp; :  &nbsp;{{ result.subject }}
+                        {{result.status}} : {{ result.name }} 
                     </button>
                     </h2>
                 </div>
@@ -80,7 +106,7 @@
         <div class="row col-md-12" >
             <div class="row col-md-5"></div>
             <div class="row col-md-4" style="margin-bottom: 30px;">
-            <a href="/" class="btn btn-primary btn-lg btn-block">Back</a>
+            <a href="/recommend" class="btn btn-primary btn-lg btn-block">Back</a>
             </div>
             <div class="row col-md"></div>
         </div>
