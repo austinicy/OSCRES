@@ -1,0 +1,38 @@
+[
+  {
+    "id": "eb0f131a-01dc-42a5-b122-7f3c0c68c009",
+    "data": [
+      {
+        "text": "see ya",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a5486f54-7b3d-4a91-9152-7dfea8b5eeb6",
+    "data": [
+      {
+        "text": "see you",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "677dd1ab-045d-4a14-b653-1446fa2b7277",
+    "data": [
+      {
+        "text": "bye",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,6 +1,10 @@
-from sqlalchemy import create_engine
-engine = create_engine('mysql://root:Test123!@localhost/oscres_db')
+username = 'root'
+password = 'Test123!'
 
+from sqlalchemy import create_engine
+connection_string = 'mysql://{0}:{1}@localhost/oscres_db'.format(username, password)
+engine = create_engine(connection_string)
+print(connection_string)
 import pandas as pd
 data_frame = pd.read_csv('Miscellaneous/university.csv')
 # con expect type sqlalchemy.engine.Engine or sqlite3.Connection
