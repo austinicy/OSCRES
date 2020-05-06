@@ -44,6 +44,7 @@ class Recommendation(KnowledgeEngine):
     def englishRule2(self):
         print('    : englishRule2')
         self.declare(Match_F(satisfy_english = True))
+        self.declare(Match_F(has_english = False))
 
     @Rule(AS.s << Student_F(prefered_academic_reputation_rank = MATCH.prefered_academic_reputation_rank), 
         TEST(lambda prefered_academic_reputation_rank: 
@@ -157,6 +158,7 @@ class Recommendation(KnowledgeEngine):
     def ieltsenglishRule(self):
         print('    : ielts_englishRule')
         self.declare(Match_F(satisfy_english = True))
+        self.declare(Match_F(has_english = True))
         self.matchingCount += 1
 
     @Rule(AS.s << Student_F(toefl = MATCH.toefl), 
@@ -166,6 +168,7 @@ class Recommendation(KnowledgeEngine):
     def toeflenglishRule(self):
         print('    : toefl_englishRule')
         self.declare(Match_F(satisfy_english = True))
+        self.declare(Match_F(has_english = True))
         self.matchingCount += 1
 
     @Rule(AS.s << Student_F(prefered_academic_reputation_rank = MATCH.prefered_academic_reputation_rank), 
@@ -347,6 +350,7 @@ class Recommendation(KnowledgeEngine):
     @Rule(AND(
         Match_F(satisfy_english = True)
         ,Match_F(is_prefered_region = True)
+        ,Match_F(has_english = True)
         ), salience =4)
     def FinancialSuggestedRule(self):
         print("belong to [recommendedbyBasic]")
@@ -355,7 +359,7 @@ class Recommendation(KnowledgeEngine):
 
 
 def field_recommendation(student):
-    field = 'Unable to recommend based on your given subject scorings'
+    field = 'Unable to recommend field of study based on your given high school scorings'
     if student['math'] > 80:
         if student['english'] > 80:
             if student['politics'] > 70:
