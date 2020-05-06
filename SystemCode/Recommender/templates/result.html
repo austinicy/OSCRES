@@ -11,16 +11,17 @@
 
         <div class = "row col-md-12" >
             {% with result_list|first as first_doc %}
-                {% if first_doc.subject == "Unable to recommend based on your given subject scorings"%}
+                {% if "Unable to" in first_doc.subject %}
                     <h5 style="text-align: center; color:red;"><b>{{ first_doc.subject}}</b></h5>
+                {% elif first_doc.subject %}
+                    <h5 style="text-align: center;"><b>{{ first_doc.subject}}</b></h5>
                 {% else %}
-                <h5 style="text-align: center;"><b>{{ first_doc.subject}}</b></h5>
                 {% endif %}
             {% endwith %}
         </div>
         <div class="row col-md-12">
             {% with result_list|first as first_doc %}
-                {% if result_list and  first_doc.subject != "Unable to recommend based on your given subject scorings"%}
+                {% if result_list and  first_doc.subject != "Unable to recommend field of study based on your given high school scorings"%}
                     <div class="row col-md-12">
                         <label>Please checkout the recommended universities:</label>
                     </div>
@@ -111,5 +112,11 @@
             <div class="row col-md"></div>
         </div>
 
+    </div>
+    <div class="row col-md-12">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+            <a href="/chatbot/" class="btn btn-primary btn-lg btn-block">ChatBot</a>
+        </div>
     </div>
 {% endblock %}
