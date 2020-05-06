@@ -1,0 +1,50 @@
+[
+  {
+    "id": "9826b6cf-7179-48ce-ac14-456ae80da89a",
+    "data": [
+      {
+        "text": "what\u0027s up",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "dd474430-6371-481b-bc62-48b1eb67fe07",
+    "data": [
+      {
+        "text": "sup",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "25476b92-bc69-4922-9789-8b47624c7f2d",
+    "data": [
+      {
+        "text": "hello",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1435946e-ba63-49f1-b623-ac4983dcf0b4",
+    "data": [
+      {
+        "text": "Hi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

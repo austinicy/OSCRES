@@ -14,6 +14,11 @@
                     sendChat()
                 }
             });
+            $("#sampleQuestions").click(() => {
+                if (!$("#sampleQuestions").prop("disabled")) {
+                    sampleQuestions()
+                }
+            });
 
             $('#question').on("keyup", function (event) {
                 event.preventDefault();
@@ -77,7 +82,7 @@ function sendChat() {
 
             //preloading image
             var image = "<img id='loading' src='" + loadingurl + "'/>"
-            var content = "<div id='" + seqno + "' class='col-md-2 chat-message'>" + image + "</div>";
+            var content = "<div id='" + seqno + "' class='chat-message'>" + image + "</div>";
             $("#chatContent").append(content)
 
             //set content bottom
@@ -92,7 +97,86 @@ function sendChat() {
 
             //remove image and append result
             $("#loading").remove()
-            $("#" + seqno).append(data)
+
+            //display based on response
+            //array response
+            var list = data.split('\n')
+            if (list.length >1) {
+
+                for (i in list) {
+                    if (list[i]) {
+                        var record = "<div class='line'>"+ list[i] + "</div>"
+                        $("#" + seqno).append(record)
+                        
+                    }
+                }
+            }
+            //simgle respopnse
+            else $("#" + seqno).append(data)
+
+            //set content bottom
+            scrollTopResp()
+        }
+    });
+}
+
+
+function sampleQuestions() {
+    var question = 'Sample Questions'
+
+    //1. append questions
+    var content = "<div class='offset-md-10 user-message'>" + question + "</div>";
+    $('#chatContent').append(content)
+
+    //generate a random number
+    var seqno = new Date().getTime()
+
+    $.ajax({
+        url: '/sendChat/',
+        data: {
+            'enquiry': question,
+            'csrfmiddlewaretoken': $('[name="csrfmiddlewaretoken"]').val()
+        },
+        type: 'POST',
+        beforeSend: function () {
+            //disable submit button
+            $("#sendChat").attr({
+                disabled: "disabled"
+            })
+
+            //preloading image
+            var image = "<img id='loading' src='" + loadingurl + "'/>"
+            var content = "<div id='" + seqno + "' class='chat-message'>" + image + "</div>";
+            $("#chatContent").append(content)
+
+            //set content bottom
+            scrollTopResp()
+        },
+        success: function (data) {
+            //2. append answers
+            $("#question").val('')
+
+            //remove disalbe status
+            $("#sendChat").removeAttr('disabled')
+
+            //remove image and append result
+            $("#loading").remove()
+
+            //display based on response
+            //array response
+            var list = data.split('\n')
+            if (list.length >1) {
+
+                for (i in list) {
+                    if (list[i]) {
+                        var record = "<div class='line'>"+ list[i] + "</div>"
+                        $("#" + seqno).append(record)
+                        
+                    }
+                }
+            }
+            //simgle respopnse
+            else $("#" + seqno).append(data)
 
             //set content bottom
             scrollTopResp()

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b3d723b4-52fb-423b-9b30-eb444c9b1ef3",
+    "data": [
+      {
+        "text": "show me some sample questions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f885209d-b302-479c-a930-12ba1f4d3049",
+    "data": [
+      {
+        "text": "sample questions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

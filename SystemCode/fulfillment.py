@@ -14,6 +14,23 @@ def join(list, attribute):
     return res
 
 def do_fulfillment(intent, params):
+    if intent == 'GreetingIntent':
+        response = "You can ask me anything you want to know about the universities. To see a list of sample questions, click the 'Sample Questions' button, or type 'sample questions'."
+        return response
+    if intent == 'ByeIntent':
+        response = 'Thanks for using the system, enjoy your study. Bye!'
+        return response
+
+    if intent == 'SampleQuestionIntent':
+        content = ''
+        file = open("Miscellaneous/Chatbot_questions.txt", "r")
+        for line in file:
+            content = content + '\n' + line
+        file.close()
+        return content
+
+
+
     if intent=='CityIntent':
         default_response = 'I am sorry, please specify a proper university'
         missing_value_response = 'I am sorry, I did not find {0}'.format(intent.replace('Intent', ''))

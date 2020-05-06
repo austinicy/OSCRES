@@ -137,15 +137,22 @@ body {
     border-radius: 10px;
     padding-left: 10px;
     background-color: rgb(212, 241, 252);
+    margin-top: 1em;
+    padding: 1em;
 }
 
 .chat-message {
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(145, 187, 143);
     border-width: 0.5px;
     margin-left: 1em;
     margin-top: 1em;
-    width: 15em;
+    width: 30em;
+    padding: 1em;
+}
+
+.line {
+    padding-top: 0.5em;
 }
 
 .send-btn {
