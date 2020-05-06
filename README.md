@@ -18,6 +18,9 @@
         `git clone "https://github.com/buguroo/pyknow.git" pyknow`   
     go to the created project directory `pyknow` and run `pip install .`  
 
+# Project Setup
+1. Clone the project repo "https://github.com/NormanLYJ/OSCRES.git"
+
 # Database
 1. install mysql  
     make sure use legecy password authentication is used   
@@ -44,6 +47,7 @@
     name file as `project_key.json`, put it into `/SystemCode` folder     
 
 # Run the application
-    `python manage.py runserver 0.0.0.0:8000`  
+    Run the applicaiton by below command in the proejct root directory
+    `python manage.py runserver 0.0.0.0:8000`   
     or add debug configuration for your preferred IDE
 

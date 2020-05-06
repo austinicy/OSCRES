@@ -21,8 +21,8 @@ class CountrySerializer(serializers.ModelSerializer):
 
 def StudentDeSerializer(data):
     return Student(
-        region = data['region'],
-        country = data['country'],
+        region = data['region'] if 'region' in data else '',
+        country = data['country'] if 'country' in data else '',
         academic_reputation_rank  = data['academic_reputation_rank'],
         employer_reputation_rank  = data['employer_reputation_rank'],
         faculty_student_rank  = data['faculty_student_rank'],
